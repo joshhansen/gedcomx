@@ -21,7 +21,8 @@
     rdf:object 221 .
 
 :claimC rdf:type gdx:Claim ;
-    gdx:subClaim :claimC_1, :claimC_2, :claimC_3 .
+    gdx:subClaim :claimC_1, :claimC_2, :claimC_3 ;
+    gdx:claimText "records:census_1930_00221 was enumerated by a person named Joseph Watkins" .
 
 :claimC_1 rdf:type gdx:Claim ;
     rdf:subject records:census_1930_00221 ;
@@ -34,7 +35,8 @@
     rdf:object :Person .
 
 :claimC_3 rdf:type gdx:Claim ;
-    gdx:subClaim :claimC_3_1, :claimC_3_2, :claimC_3_3 .
+    gdx:subClaim :claimC_3_1, :claimC_3_2, :claimC_3_3 ;
+    gdx:claimText ":personA's name is Joseph Watkins" .
 
 :claimC_3_1 rdf:type gdx:Claim ;
     rdf:subject :personA ;
@@ -59,7 +61,8 @@
     rdf:object gdx:Person .
 
 :claim2 rdf:type gdx:Claim ;
-    gdx:subClaim :claim2_1, :claim2_2, :claim2_3, :claim2_4 .
+    gdx:subClaim :claim2_1, :claim2_2, :claim2_3, :claim2_4 ;
+    gdx:claimText ":person1 is named Bob Jones" .
 
 :claim2_1 rdf:type gdx:Claim ;
     rdf:subject :person1 ;
@@ -82,7 +85,8 @@
     rdf:object "Jones" .
 
 :claim3 rdf:type gdx:Claim ;
-    gdx:subClaim :claim3_1, :claim3_2, :claim3_3, :claim3_4 .
+    gdx:subClaim :claim3_1, :claim3_2, :claim3_3, :claim3_4 ;
+    gdx:claimText ":person1 was 43 years old on July 12th, 1910" .
 
 :claim3_1 rdf:type gdx:Claim ;
     rdf:subject :person1 ;
@@ -95,7 +99,7 @@
     rdf:object gdx:Age .
 
 :claim3_4 rdf:type gdx:Claim ;
-    gdx:forTime "1910" ;
+    gdx:forTime "12 Jul 1910" ;
     rdf:subject :age1 ;
     rdf:predicate gdx:simpleAge ;
     rdf:object "43y" .
@@ -107,7 +111,8 @@
     rdf:object gdx:Person .
 
 :claim5 rdf:type gdx:Claim ;
-    gdx:subClaim :claim5_1, :claim5_2, :claim5_3, :claim5_4 .
+    gdx:subClaim :claim5_1, :claim5_2, :claim5_3, :claim5_4 ;
+    gdx:claimText ":person2 is named Salty Jones" .
 
 :claim5_1 rdf:type gdx:Claim ;
     rdf:subject :person2 ;
@@ -130,7 +135,8 @@
     rdf:object "Jones" .
 
 :claim6 rdf:type gdx:Claim ;
-    gdx:subClaim :claim6_1, :claim6_2, :claim6_3 .
+    gdx:subClaim :claim6_1, :claim6_2, :claim6_3 ;
+    gdx:claimText ":person2 was 41 years old on July 12th, 1910" .
 
 :claim6_1 rdf:type gdx:Claim ;
     rdf:subject :person2 ;
@@ -143,7 +149,7 @@
     rdf:object gdx:Age .
 
 :claim6_4 rdf:type gdx:Claim ;
-    gdx:forTime "1910" ;
+    gdx:forTime "12 Jul 1910" ;
     rdf:subject :age2 ;
     rdf:predicate gdx:simpleAge ;
     rdf:object "41y" .

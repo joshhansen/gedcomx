@@ -1,0 +1,8 @@
+# The personal genealogical data file of one Joseph C. Schmo
+
+<> rdf:type gdx:GenealogicalData ;
+    gdx:claimsBy users:joeschmo .
+
+
+:place1 rdf:type gdx:Place ;
+    gdx:simplePlace "Brignuth, England" .

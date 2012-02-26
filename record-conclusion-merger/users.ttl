@@ -14,14 +14,14 @@
 	gdx:username "marysmith" ;
 	gdx:joined "22 Dec 2007" .
 
-:janeblogs rdf:type gdx:Indexer ;
+:janebloggs rdf:type gdx:Indexer ;
 	gdx:name [rdf:type gdx:Name ;
 		  rdf:simpleName "Jane Blogs" ] ;
 	gdx:username "janeblogs" ;
 	gdx:joined "6 Jun 2008" ;
 	gdx:batchesIndexed 10 .
 
-:joeblogs rdf:type g:Indexer ;
+:joebloggs rdf:type gdx:Indexer ;
 	gdx:name [rdf:type gdx:Name ;
 		  rdf:simpleName "Joe Blogs" ] ;
 	gdx:username "joeblogs" ;

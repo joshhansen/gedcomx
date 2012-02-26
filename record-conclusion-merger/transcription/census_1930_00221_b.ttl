@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gdx: <http://example.com/genealogy#> .
+@prefix users: <http://example.com/users#> .
+@prefix a: <http://example.com/transcription/census_1930_00221_a#> .
+@prefix : <http://example.com/transcription/census_1930_00221_b#> .
+
+# A primary function of this document is to assess the claims in the original transcription
+<>  rdf:type gdx:GenealogicalData ;
+    gdx:assessmentOf <http://example.com/transcription/census_1930_00221_a> ;
+    gdx:claimsBy users:parknan ;
+    gdx:assessmentsBy users:parknan .
+
+# Differ with calling person a:person2 "Salty"
+:assessment1 rdf:type gdx:Assessment ;
+    gdx:assesses a:claim5_3 ;
+    gdx:assessment gdx:somewhatDisagreeWith .
+
+# Provide a claim calling that person "Sally"...
+:claim1 rdf:type gdx:Claim ;
+    gdx:antecedent a:claim5_3, :assessment1 ;
+    rdf:subject a:name2 ;
+    rdf:predicate gdx:givenName ;
+    rdf:object "Sally" .
+
+# ...and show strong approval for this new interpretation
+:assessment2 rdf:type gdx:Assessment ;
+    gdx:assesses :claim1 ;
+    gdx:assessment gdx:stronglyAgreeWith .

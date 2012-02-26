@@ -9,35 +9,36 @@
 @prefix : <http://example.com/synthesis/2012_feb_22_00008#> .
 
 <> rdf:type gdx:GenealogicalData ;
-    gdx:claimsBy users:marysmith .
-
-# Two people we're referencing from the transcriptions
-:person1 rdf:type gdx:Person ;
-    owl:sameAs src1:person1 .
-
-:person2 rdf:type gdx:Person ;
-    owl:sameAs src2:person1 .
+    gdx:claimsBy users:marysmith ;
+    gdx:assessmentsBy users:marysmith .
 
 # The synthesized person we're creating to represent Bob Jones.
-:person3 rdf:type gdx:Person .
+:person1 rdf:type gdx:Person .
 
 # Assert some equivalences
-:claimA rdf:type gdx:Claim ;
+:claim1 rdf:type gdx:Claim ;
     gdx:antecedent src3:claim1 ;
-    rdf:subject :person3 ;
+    rdf:subject :person1 ;
     rdf:predicate owl:sameAs ;
-    rdf:object :person1 .
+    rdf:object src1:person1 ;
+    gdx:claimText ":person3 is the same as src1:person1" .
 
-:claimB rdf:type gdx:Claim ;
+:claim2 rdf:type gdx:Claim ;
     gdx:antecedent src3:claim1 ;
-    rdf:subject :person3 ;
+    rdf:subject :person1 ;
     rdf:predicate owl:sameAs ;
-    rdf:object :person2 .
+    rdf:object src2:person1 ;
+    gdx:claimText ":person1 is the same as src2:person1" .
 
 # Deduce Bob Jones's birth date from the two age facts
-:claimC rdf:type gdx:Claim ;
+:claim3 rdf:type gdx:Claim ;
     gdx:created "22 Feb 2012" ;
     gdx:antecedent :claim1, :claim2, :claim3 ;
     rdf:subject :person3 ;
     rdf:predicate gdx:birthDate ;
-    rdf:object "1867" .
+    rdf:object "1867" ;
+    gdx:claimText ":person3 was born in 1867" .
+
+:assessment1 rdf:type gdx:Assessment ;
+    gdx:assesses :claim1, :claim2, :claim3 ;
+    gdx:assessment gdx:somewhatAgreeWith .
