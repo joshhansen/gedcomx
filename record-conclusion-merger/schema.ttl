@@ -62,9 +62,14 @@
 	rdfs:domain :Person ;
 	rdfs:range xsd:string .
 
+:birthPlace rdf:type rdf:Property ;
+    rdfs:domain :Person ;
+    rdfs:range :Place .
+
 # Names
 :Name rdf:type rdfs:Class .
 
+# A single string representing the name of a person in as a full a form as possible
 :simpleName rdf:type rdf:Property ;
 	rdfs:domain :Name ;
 	rdfs:range xsd:string .
@@ -76,6 +81,14 @@
 :familyName rdf:type rdf:Property ;
 	rdfs:domain :Name ;
 	rdfs:range xsd:string .
+
+# Places
+:Place rdf:type rdfs:Class ;
+    owl:subClassOf geo:SpatialThing .
+
+:simplePlace rdf:type rdf:Property ;
+    rdfs:domain :Place ;
+    rdfs:range xsd:string .
 
 # Ages
 # NOTE: since an age is only meaningful at a certain point in time, it is recommended to encapsulate all properties of
@@ -123,6 +136,11 @@
 # Claims can be linked together into chains of reasoning by the means of :antecedent.
 :Claim rdf:type rdfs:Class ;
     rdfs:subClassOf rdf:Statement .
+
+# A textual representation of a claim
+:claimText rdf:type rdf:Property ;
+    rdfs:domain :Claim ;
+    rdfs:range xsd:string .
 
 :created rdf:type rdf:Property ;
     rdfs:domain :Claim ;
@@ -180,6 +198,14 @@
 :assessment rdf:type rdf:Property ;
     rdfs:domain :Assessment ;
     rdfs:range :AssessmentValue .
+
+:assessmentText rdf:type rdf:Property ;
+    rdfs:domain :Assessment ;
+    rdfs:range xsd:string .
+
+:assessmentExplanation rdf:type rdf:Property ;
+    rdfs:domain :Assessment ;
+    rdfs:range xsd:string .
 
 # The meat of the assessment semantics resides in AssessmentValue, its subclasses, and their individuals
 :AssessmentValue rdf:type rdfs:Class .
