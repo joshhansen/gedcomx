@@ -48,7 +48,7 @@
 
 :batchesIndexed rdf:type rdf:Property ;
 	rdfs:domain :Indexer ;
-	rdfs:range xsd:integer .
+	rdfs:range xsd:int .
 
 # People properties
 :name rdf:type rdf:Property ;
@@ -102,7 +102,7 @@
 
 :pageNumber rdf:type rdf:Property ;
 	rdfs:domain :Record ;
-	rdfs:range xsd:integer .
+	rdfs:range xsd:int .
 
 :PopulationSchedule rdf:type rdfs:Class ;
 	rdfs:subClassOf :Record .

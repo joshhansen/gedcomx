@@ -1,4 +1,5 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix gdx: <http://example.com/genealogy#> .
 @prefix users: <http://example.com/users#> .
 @prefix records: <http://example.com/records#> .
