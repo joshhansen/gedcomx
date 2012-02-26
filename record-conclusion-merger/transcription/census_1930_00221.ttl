@@ -5,110 +5,145 @@
 @prefix : <http://example.com/transcription/census_1930_00221_a#> .
 
 # This file is a transcription of 1930 Census record 00221 by Joe Blogs
-<> 	rdf:type gdx:Transcription ;
-	gdx:transcribedBy users:joeblogs ;
-	gdx:transcriptionOf records:census_1930_00221 .
-	#This implies that all facts in this document have
-	#    gdx:contributor users:joeblogs
-	# and 
-	#    gdx:factTranscriptionOf records:census_1930_00221
-	# unless otherwise specified.
+<> rdf:type gdx:GenealogicalData ;
+    gdx:transcriptionOf records:census_1930_00221 ;
+    gdx:claimsBy users:joeblogs .
 
 # The facts they transcribe about the record itself
-:factA	rdf:type gdx:TranscribedFact ;
-	rdf:subject records:census_1930_00221 ;
-	rdf:predicate gdx:enumerationDate ;
-	rdf:object "12 Jul 1910" .
-:factB	rdf:type TranscribedFact ;
-	rdf:subject records:census_1930_00221 ;
-	rdf:predicate gdx:pageNumber ;
-	rdf:object 221 .
-:factC	rdf:type TranscribedFact ;
-	rdf:subject records:census_1930_00221 ;
-	rdf:predicate gdx:enumerator ;
-	rdf:object [
-		rdf:type :TranscribedPerson ;
-		gdx:name [
-			rdf:type :Name ;
-			gdx:simpleName "Joseph Watkins"
-		]
-	] .
+:claimA rdf:type gdx:Claim ;
+    rdf:subject records:census_1930_00221 ;
+    rdf:predicate gdx:enumerationDate ;
+    rdf:object "12 Jul 1910" .
 
-# Identifiers for the people they transcribe
-:person1 rdf:type TranscribedPerson .
-:person2 rdf:type TranscribedPerson .
+:claimB rdf:type gdx:Claim ;
+    rdf:subject records:census_1930_00221 ;
+    rdf:predicate gdx:pageNumber ;
+    rdf:object 221 .
+
+:claimC rdf:type gdx:Claim ;
+    gdx:subClaim :claimC_1, :claimC_2, :claimC_3 .
+
+:claimC_1 rdf:type gdx:Claim ;
+    rdf:subject records:census_1930_00221 ;
+    rdf:predicate gdx:enumerator ;
+    rdf:object :personA .
+
+:claimC_2 rdf:type gdx:Claim ;
+    rdf:subject :personA ;
+    rdf:predicate rdf:type ;
+    rdf:object :Person .
+
+:claimC_3 rdf:type gdx:Claim ;
+    gdx:subClaim :claimC_3_1, :claimC_3_2, :claimC_3_3 .
+
+:claimC_3_1 rdf:type gdx:Claim ;
+    rdf:subject :personA ;
+    rdf:predicate gdx:name ;
+    rdf:object :nameA .
+
+:claimC_3_2 rdf:type gdx:Claim ;
+    rdf:subject :nameA ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Name .
+
+:claimC_3_3 rdf:type gdx:Claim ;
+    rdf:subject :nameA ;
+    rdf:predicate gdx:simpleName ;
+    rdf:object "Joseph Watkins" .
 
 # Facts they transcribe about the people in the record
-:fact1 rdf:type Fact ;
-	rdf:subject :person1 ;
-	rdf:predicate gdx:name ;
-	rdf:object [
-		rdf:type gdx:Name ;
-		gdx:givenName "Bob" ;
-		gdx:familyName "Jones"
-	] .
+## First person
+:claim1 rdf:type rdx:Claim ;
+    rdf:subject :person1 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Person .
 
 :claim2 rdf:type gdx:Claim ;
-	rdf:subject :person2 ;
-	rdf:predicate gdx:name ;
-	rdf:object :name2 .
+    gdx:subClaim :claim2_1, :claim2_2, :claim2_3, :claim2_4 .
 
 :claim2_1 rdf:type gdx:Claim ;
+    rdf:subject :person1 ;
+    rdf:predicate gdx:name ;
+    rdf:object :name1 .
+
+:claim2_2 rdf:type gdx:Claim ;
+    rdf:subject :name1 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Name .
+
+:claim2_3 rdf:type gdx:Claim ;
+    rdf:subject :name1 ;
+    rdf:predicate gdx:givenName ;
+    rdf:object "Bob" .
+
+:claim2_4 rdf:type gdx:Claim ;
+    rdf:subject :name1 ;
+    rdf:predicate gdx:familyName ;
+    rdf:object "Jones" .
+
+:claim3 rdf:type gdx:Claim ;
+    gdx:subClaim :claim3_1, :claim3_2, :claim3_3, :claim3_4 .
+
+:claim3_1 rdf:type gdx:Claim ;
+    rdf:subject :person1 ;
+    rdf:predicate gdx:age ;
+    rdf:object :age1 .
+
+:claim3_2 rdf:type gdx:Claim ;
+    rdf:subject :age1 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Age .
+
+:claim3_4 rdf:type gdx:Claim ;
+    gdx:forTime "1910" ;
+    rdf:subject :age1 ;
+    rdf:predicate gdx:simpleAge ;
+    rdf:object "43y" .
+
+## Second person
+:claim4 rdf:type rdx:Claim ;
+    rdf:subject :person2 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Person .
+
+:claim5 rdf:type gdx:Claim ;
+    gdx:subClaim :claim5_1, :claim5_2, :claim5_3, :claim5_4 .
+
+:claim5_1 rdf:type gdx:Claim ;
+    rdf:subject :person2 ;
+    rdf:predicate gdx:name ;
+    rdf:object :name2 .
+
+:claim5_2 rdf:type gdx:Claim ;
     rdf:subject :name2 ;
     rdf:predicate rdf:type ;
     rdf:object gdx:Name .
 
-:claim2_2 rdf:type gdx:Claim ;
+:claim5_3 rdf:type gdx:Claim ;
     rdf:subject :name2 ;
     rdf:predicate gdx:givenName ;
     rdf:object "Salty" .
 
-:claim2_3 rdf:type gdx:Claim ;
+:claim5_4 rdf:type gdx:Claim ;
     rdf:subject :name2 ;
     rdf:predicate gdx:familyName ;
     rdf:object "Jones" .
 
-:assessment2_2 rdf:type gdx:Assessment ;
-    gdx:assesses :claim2_2 ;
-    
+:claim6 rdf:type gdx:Claim ;
+    gdx:subClaim :claim6_1, :claim6_2, :claim6_3 .
 
-:claim2_2b rdf:type gdx:Claim ;
-    rdf:subject :name2 ;
-    rdf:predicate gdx:givenName ;
-    
-
-
-[
-		rdf:type gdx:Name ;
-		gdx:givenName "Salty" ;
-		gdx:familyName "Jones"
-	] .
-
-:fact2b rdf:type Fact ;
+:claim6_1 rdf:type gdx:Claim ;
     rdf:subject :person2 ;
-    rdf:predicate gdx:name ;
-    rdf:object [
-        rdf:type gdx:Name ;
-        gdx:givenName "Sally" ;
-        gdx:familyName "Jones"
-    ] ;
-    gdx:antecedent :fact2 ;
-    
+    rdf:predicate gdx:age ;
+    rdf:object :age2 .
 
-:fact3 rdf:type Fact ;
-	rdf:subject :person1 ;
-	rdf:predicate gdx:age ;
-	rdf:object [
-		rdf:type Age ;
-		gdx:ageAtTime "1910" ;
-		gdx:ageValue "43y"
-	] .
+:claim6_2 rdf:type gdx:Claim ;
+    rdf:subject :age2 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Age .
 
-:fact4 rdf:type Fact ;
-	rdf:subject :person2 ;
-	rdf:predicate gdx:age ;
-	rdf:object [
-		rdf:type Age ;
-		gdx:ageAtTime "1910" ;
-		gdx:ageValue "41y"
-	] .
+:claim6_4 rdf:type gdx:Claim ;
+    gdx:forTime "1910" ;
+    rdf:subject :age2 ;
+    rdf:predicate gdx:simpleAge ;
+    rdf:object "41y" .

@@ -3,69 +3,41 @@
 @prefix gdx: <http://example.com/genealogy#> .
 @prefix users: <http://example.com/users#> .
 @prefix records: <http://example.com/records#> .
+@prefix src1: <http://example.com/transcription/census_1930_00221_a#> .
+@prefix src2: <http://example.com/transcription/census_1940_00336_a#> .
+@prefix src3: <http://example.com/synthesis/2012jan5_00044#> .
 @prefix : <http://example.com/synthesis/2012_feb_22_00008#> .
 
-<> rdf:type gdx:Synthesis ;
-	gdx:synthesisBy users:marysmith .
+<> rdf:type gdx:GenealogicalData ;
+    gdx:claimsBy users:marysmith .
 
 # Two people we're referencing from the transcriptions
-:person1 rdf:type gdx:TranscribedPerson ;
-	owl:sameAs <http://example.com/transcription/census_1930_00221#person1> .
+:person1 rdf:type gdx:Person ;
+    owl:sameAs src1:person1 .
 
-:person2 rdf:type gdx:TranscribedPerson ;
-	owl:sameAs <http://example.com/transcription/census_1940_00336#person1> .
+:person2 rdf:type gdx:Person ;
+    owl:sameAs src2:person1 .
 
 # The synthesized person we're creating to represent Bob Jones.
 :person3 rdf:type gdx:Person .
 
-# Restate our source facts with proper attribution in case the original goes away
-# (i.e. it’s on a system under someone else’s control)
-:fact1 rdf:type gdx:TranscribedFact ;
-	gdx:transcribedBy users:joeblogs ;
-	gdx:transcriptionOf records:census_1930_00221 ;
-	rdf:subject :person1 ;
-	rdf:predicate gdx:age ;
-	rdf:object [
-		rdf:type gdx:Age ;
-		gdx:ageAtTime "1910" ;
-		gdx:ageValue "43y"
-	] .
-
-:fact2 rdf:type gdx:TranscribedFact ;
-	gdx:transcribedBy users:janeblogs ;
-	gdx:transcriptionOf records:census_1940_00336 ;
-	rdf:subject :person2 ;
-	rdf:predicate gdx:age ;
-	rdf:object [
-		rdf:type gdx:Age ;
-		gdx:ageAtTime "1920" ;
-		gdx:ageValue "53y"
-	] .
-
-:fact3 rdf:type gdx:SynthesizedFact ;
-	gdx:synthesizedBy users:jorgegomez ;
-	gdx:factCreationDate "5 Jan 2012" ;
-	rdf:subject <http://example.com/transcription/census_1930_00221#person1> ;
-	rdf:predicate owl:sameAs ;
-	rdf:object <http://example.com/transcription/census_1940_00336#person3> .
-
 # Assert some equivalences
-:factA rdf:type gdx:SynthesizedFact ;
-	gdx:supportingFact :fact3 ;
-	rdf:subject :person3 ;
-	rdf:predicate owl:sameAs ;
-	rdf:object :person1 .
+:claimA rdf:type gdx:Claim ;
+    gdx:antecedent src3:claim1 ;
+    rdf:subject :person3 ;
+    rdf:predicate owl:sameAs ;
+    rdf:object :person1 .
 
-:factB rdf:type gdx:SynthesizedFact ;
-	gdx:supportingFact :fact3 ;
-	rdf:subject :person3 ;
-	rdf:predicate owl:sameAs ;
-	rdf:object :person2 .
+:claimB rdf:type gdx:Claim ;
+    gdx:antecedent src3:claim1 ;
+    rdf:subject :person3 ;
+    rdf:predicate owl:sameAs ;
+    rdf:object :person2 .
 
 # Deduce Bob Jones's birth date from the two age facts
-:factC rdf:type gdx:SynthesizedFact ;
-	gdx:factCreationDate "22 Feb 2012" ;
-	gdx:supportingFact :fact1, :fact2, :fact3 ;
-	rdf:subject :person3 ;
-	rdf:predicate gdx:birthDate ;
-	rdf:object "1867" .
+:claimC rdf:type gdx:Claim ;
+    gdx:created "22 Feb 2012" ;
+    gdx:antecedent :claim1, :claim2, :claim3 ;
+    rdf:subject :person3 ;
+    rdf:predicate gdx:birthDate ;
+    rdf:object "1867" .

@@ -7,30 +7,29 @@
 # Datasets
 :GenealogicalData rdf:type rdfs:Class .
 
-:Transcription rdf:type rdfs:Class ;
-	rdfs:subClassOf :GenealogicalData .
-
-:transcribedBy rdf:type rdf:Property ;
-	rdfs:domain :Transcription ;
-	rdfs:range :Person .
-
 :transcriptionOf rdf:type rdf:Property ;
-	rdfs:domain :Transcription ;
-	rdfs:range :Record .
+    rdfs:domain :GenealogicalData ;
+    rdfs:range :Record .
 
-:Synthesis rdf:type rdfs:Class ;
-	rdfs:subClassOf :GenealogicalData .
+:assessmentOf rdf:type rdf:Property ;
+    rdfs:domain :GenealogicalData ;
+    rdfs:range :GenealogicalData .
 
-:synthesisBy rdf:type rdf:Property ;
-	rdfs:domain :Synthesis ;
-	rdfs:range :Person .
+:claimsBy rdf:type rdf:Property ;
+	rdfs:domain :GenealogicalData ;
+	rdfs:range :Agent .
 
-# People
+:assessmentsBy rdf:type rdf:Property ;
+	rdfs:domain :GenealogicalData ;
+	rdfs:range :Agent .
+
+# People (and Agents!)
+:Agent rdf:type rdfs:Class ;
+    owl:equivalentClass foaf:Agent .
+
 :Person rdf:type rdfs:Class ;
-	owl:equivalentClass foaf:Person .
-
-:TranscribedPerson rdf:type rdfs:Class ;
-	rdfs:subClassOf :Person .
+    owl:equivalentClass foaf:Person ;
+    owl:subClassOf :Agent .
 
 :User rdf:type rdfs:Class ;
 	rdfs:subClassOf :Person .
@@ -79,15 +78,13 @@
 	rdfs:range xsd:string .
 
 # Ages
+# NOTE: since an age is only meaningful at a certain point in time, it is recommended to encapsulate all properties of
+# Age objects in Claims with the forTime property restricting the time to which the claim applies.
 :Age rdf:type rdfs:Class .
 
-:ageAtTime rdf:type rdfs:Class ;
-	rdfs:domain :Age ;
-	rdfs:range xsd:string .
-
-:ageValue rdf:type rdfs:Class ;
-	rdfs:domain :Age ;
-	rdfs:range xsd:string .
+:simpleAge rdf:type rdf:Property ;
+    rdfs:domain :Age ;
+    rdfs:range xsd:string .
 
 # Records
 :Record rdf:type rdfs:Class .
@@ -143,17 +140,26 @@
     rdfs:domain :Claim ;
     rdfs:range :Agent .
 
+:forTime rdf:type rdf:Property ;
+    rdfs:domain :Claim ;
+    rdfs:range xsd:string .
+
 # Any evidence useful in evaluating the truthfulness of this claim
 :evidence rdf:type rdf:Property ;
 	rdfs:domain :Claim ;
 	rdfs:range rdf:Resource .
 
-# Other claims upon which this claim depends. That is, if an antecedent claim is true it will generally strengthen the
-# case that this claim is true; if an antecedent claim is false, it will generally weaken the case that this claim is
-# true.
-:antecedent rdf:type rdf:Property ;
-	rdfs:domain :Claim ;
-	rdfs:range :Claim .
+## Other claims upon which this claim depends. That is, if an antecedent claim is true it will generally strengthen the
+## case that this claim is true; if an antecedent claim is false, it will generally weaken the case that this claim is
+## true.
+#:antecedent rdf:type rdf:Property ;
+#	rdfs:domain :Claim ;
+#	rdfs:range :Claim .
+
+# A given claim should be considered the union of itself with any descendant sub-claims
+:subClaim rdf:type rdf:Property ;
+    rdfs:domain :Claim ;
+    rdfs:range :Claim .
 
 :claimTranscriptionOf rdf:type rdf:Property ;
 	rdfs:domain :Claim ;
@@ -171,7 +177,7 @@
     rdfs:domain :Assessment ;
     rdfs:range :Agent .
 
-:assessmentValue rdf:type rdf:Property ;
+:assessment rdf:type rdf:Property ;
     rdfs:domain :Assessment ;
     rdfs:range :AssessmentValue .
 
@@ -184,6 +190,6 @@
 :stronglyAgreeWith rdf:type rdfs:SimpleAssessmentValue .
 :somewhatAgreeWith rdf:type rdfs:SimpleAssessmentValue .
 :neitherAgreeNorDisagree rdf:type rdfs:SimpleAssessmentValue .
-:somewhatDisagreeWithClaim rdf:type rdfs:SimpleAssessmentValue .
-:stronglyDisagreeWithClaim rdf:type rdfs:SimpleAssessmentValue .
+:somewhatDisagreeWith rdf:type rdfs:SimpleAssessmentValue .
+:stronglyDisagreeWith rdf:type rdfs:SimpleAssessmentValue .
 

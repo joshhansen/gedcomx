@@ -1,15 +1,17 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix gdx: <http://example.com/genealogy#> .
 @prefix users: <http://example.com/users#> .
+@prefix src1: <http://example.com/transcription/census_1930_00221_a#> .
+@prefix src2: <http://example.com/transcription/census_1940_00336_a#> .
 @prefix : <http://example.com/synthesis/2012jan5_00044#> .
 
-<> rdf:type gdx:Synthesis ;
-	:synthesisBy users:jorgegomez .
+<> rdf:type gdx:GenealogicalData ;
+	:claimsBy users:jorgegomez .
 
 # Jorge Gomez says he thinks that person1 on 1930 Census record 00221 and person1 on 1940 Census record 00336 are the
 # same person
-:fact1 rdf:type gdx:SynthesizedFact ;
-	gdx:factCreationDate "5 Jan 2012" ;
-	rdf:subject <http://example.com/transcription/1930census_00221#person1> ;
+:claim1 rdf:type gdx:Claim ;
+	gdx:created "5 Jan 2012" ;
+	rdf:subject src1:person1 ;
 	rdf:predicate owl:sameAs ;
-	rdf:object <http://example.com/transcription/1940census_00336#person3> .
+	rdf:object src2:person3 .
