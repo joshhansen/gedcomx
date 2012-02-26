@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gdx: <http://example.com/genealogy#> .
+@prefix records: <http://example.com/records#> .
+@prefix users: <http://example.com/users#> .
+@prefix : <http://example.com/transcription/1940census_00336_a#> .
+
+# This file is a transcription of 1940 Census record 00336 done by Jane Blogs
+<> 	rdf:type gdx:Transcription ;
+	gdx:transcribedBy users:janeblogs ;
+	gdx:transcriptionOf records:1940census00336 .
+
+# Facts transcribed about the record itself
+:factA	rdf:type TranscribedFact ;
+	rdf:subject recordB ;
+	rdf:predicate date ;
+	rdf:object “4 Jun 1940” .
+:factB	rdf:type TranscribedFact ;
+	rdf:subject records:1940census00336 ;
+	rdf:predicate pageNum ;
+	rdf:object 202 .
+:factC	rdf:type TranscribedFact ;
+	rdf:subject records:1940census00336 ;
+	rdf:predicate enumerator ;
+	rdf:object “Edgar Sachs” .
+
+:person1 rdf:type TranscribedPerson .
+
+:fact1 rdf:type TranscribedFact ;
+	rdf:subject :person1 ;
+	rdf:predicate gdx:name ;
+	rdf:object [
+		rdf:type gdx:Name ;
+		gdx:givenName "Bob" ;
+		gdx:familyName "Jones"
+	] .
+
+:fact2 rdf:type TranscribedFact ;
+	rdf:subject :person1 ;
+	rdf:predicate gdx:age ;
+	rdf:object [
+		rdf:type Age ;
+		atTime "1920" ;
+		value "53y"
+	] .

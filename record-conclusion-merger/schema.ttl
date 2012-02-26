@@ -1,0 +1,144 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <http://example.com/genealogy#> .
+
+# Datasets
+:GenealogicalData rdf:type rdfs:Class .
+
+:Transcription rdf:type rdfs:Class ;
+	rdfs:subClassOf :GenealogicalData .
+
+:transcribedBy rdf:type rdf:Property ;
+	rdfs:domain :Transcription ;
+	rdfs:range :Person .
+
+:transcriptionOf rdf:type rdf:Property ;
+	rdfs:domain :Transcription ;
+	rdfs:range :Record .
+
+:Synthesis rdf:type rdfs:Class ;
+	rdfs:subClassOf :GenealogicalData .
+
+:synthesisBy rdf:type rdf:Property ;
+	rdfs:domain :Synthesis ;
+	rdfs:range :Person .
+
+# People
+:Person rdf:type rdfs:Class ;
+	owl:equivalentClass foaf:Person .
+
+:TranscribedPerson rdf:type rdfs:Class ;
+	rdfs:subClassOf :Person .
+
+:User rdf:type rdfs:Class ;
+	rdfs:subClassOf :Person .
+
+:username rdf:type rdf:Property ;
+	rdfs:domain :User ;
+	rdfs:range xsd:string .
+
+:joined rdf:type rdf:Property ;
+	rdfs:domain :User ;
+	rdfs:range xsd:string .
+
+:Indexer rdf:type rdfs:Class ;
+	rdfs:subClassOf :User .
+
+:batchesIndexed rdf:type rdf:Property ;
+	rdfs:domain :Indexer ;
+	rdfs:range xsd:integer .
+
+# People properties
+:name rdf:type rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range :Name .
+
+:age rdf:type rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range :Age .
+
+:birthDate rdf:type rdf:Property ;
+	rdfs:domain :Person ;
+	rdfs:range xsd:string .
+
+# Names
+:Name rdf:type rdfs:Class .
+
+:simpleName rdf:type rdf:Property ;
+	rdfs:domain :Name ;
+	rdfs:range xsd:string .
+
+:givenName rdf:type rdf:Property ;
+	rdfs:domain :Name ;
+	rdfs:range xsd:string .
+
+:familyName rdf:type rdf:Property ;
+	rdfs:domain :Name ;
+	rdfs:range xsd:string .
+
+# Ages
+:Age rdf:type rdfs:Class .
+
+:atTime rdf:type rdfs:Class ;
+	rdfs:domain :Age ;
+	rdfs:range xsd:string .
+
+:value rdf:type rdfs:Class ;
+	rdfs:domain :Age ;
+	rdfs:range xsd:string .
+
+# Records
+:Record rdf:type rdfs:Class .
+
+:recordImageLocation rdf:type rdf:Property ;
+	rdfs:domain :Record ;
+	rdfs:range xsd:anyURI .
+
+:recordDate rdf:type rdf:Property ;
+	rdfs:domain :Record ;
+	rdfs:range xsd:string .
+
+:pageNumber rdf:type rdf:Property ;
+	rdfs:domain :Record ;
+	rdfs:range xsd:integer .
+
+:PopulationSchedule rdf:type rdfs:Class ;
+	rdfs:subClassOf :Record .
+
+:enumerationDate rdf:type rdf:Property ;
+	rdfs:subPropertyOf :recordDate ;
+	rdfs:domain :PopulationSchedule ;
+	rdfs:range xsd:string .
+
+:enumerator rdf:type rdf:Property ;
+	rdfs:domain :PopulationSchedule ;
+	rdfs:range :Person .
+
+
+# Facts
+:Fact rdf:type rdfs:Class ;
+	rdfs:subClassOf rdf:Statement .
+
+:TranscribedFact rdf:type rdfs:Class ;
+	rdfs:subClassOf :Fact .
+
+:SynthesizedFact rdf:type rdfs:Class ;
+	rdfs:subClassOf :Fact .
+
+:factCreationDate rdf:type rdf:Property ;
+	rdfs:domain :Fact ;
+	rdfs:range xsd:string .
+
+# Any evidence involved in this conclusion
+:factEvidence rdf:type rdf:Property ;
+	rdfs:domain :Fact ;
+	rdfs:range rdf:Resource .
+
+# Other facts involved in this conclusion
+:supportingFact rdf:type rdf:Property ;
+	rdfs:subPropertyOf :factEvidence ;
+	rdfs:domain :Fact ;
+	rdfs:range :Fact .
+

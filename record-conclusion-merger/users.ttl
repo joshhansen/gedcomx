@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gdx: <http://example.com/genealogy#> .
+@prefix : <http://example.com/users#> .
+
+:jorgegomez rdf:type gdx:User ;
+	gdx:name [rdf:type gdx:Name ;
+		  rdf:simpleName "Jorge Gomez" ] ;
+	gdx:username "jorgegomez" ;
+	gdx:joined "30 Jul 2007" .
+
+:marysmith rdf:type gdx:User ;
+	gdx:name [rdf:type gdx:Name ;
+		  rdf:simpleName "Mary Smith" ] ;
+	gdx:username "marysmith" ;
+	gdx:joined "22 Dec 2007" .
+
+:janeblogs rdf:type gdx:Indexer ;
+	gdx:name [rdf:type gdx:Name ;
+		  rdf:simpleName "Jane Blogs" ] ;
+	gdx:username "janeblogs" ;
+	gdx:joined "6 Jun 2008" ;
+	gdx:batchesIndexed 10 .
+
+:joeblogs rdf:type g:Indexer ;
+	gdx:name [rdf:type gdx:Name ;
+		  rdf:simpleName "Joe Blogs" ] ;
+	gdx:username "joeblogs" ;
+	gdx:joined "4 Apr 2011" ;
+	gdx:batchesIndexed 55 .
