@@ -1,11 +1,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix gdx: <http://example.com/genealogy#> .
-@prefix images: <http://example.com/images/> .
 @prefix : <http://example.com/records#> .
 
 
-:1930census00221 rdf:type gdx:PopulationSchedule ;
-	gdx:recordImageLocation images:1930census00221.jpg .
+:census_1930_00221 rdf:type gdx:PopulationSchedule ;
+	gdx:recordImageLocation <http://example.com/images/census_1930_00221.jpg> .
 
-:1940census00336 rdf:type gdx:PopulationSchedule ;
-	gdx:recordImageLocation images:1940census00336.jpg .
+:census_1940_00336 rdf:type gdx:PopulationSchedule ;
+	gdx:recordImageLocation <http://example.com/images/census_1940_00336.jpg> .

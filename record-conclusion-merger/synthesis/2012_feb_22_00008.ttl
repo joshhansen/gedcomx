@@ -10,10 +10,10 @@
 
 # Two people we're referencing from the transcriptions
 :person1 rdf:type gdx:TranscribedPerson ;
-	owl:sameAs <http://example.com/transcription/1930census_00221#person1> .
+	owl:sameAs <http://example.com/transcription/census_1930_00221#person1> .
 
 :person2 rdf:type gdx:TranscribedPerson ;
-	owl:sameAs <http://example.com/transcription/1940census_00336#person1> .
+	owl:sameAs <http://example.com/transcription/census_1940_00336#person1> .
 
 # The synthesized person we're creating to represent Bob Jones.
 :person3 rdf:type gdx:Person .
@@ -22,32 +22,32 @@
 # (i.e. it’s on a system under someone else’s control)
 :fact1 rdf:type gdx:TranscribedFact ;
 	gdx:transcribedBy users:joeblogs ;
-	gdx:transcriptionOf records:1930census00221 ;
+	gdx:transcriptionOf records:census_1930_00221 ;
 	rdf:subject :person1 ;
 	rdf:predicate gdx:age ;
 	rdf:object [
-		rdf:type Age ;
-		atTime "1910" ;
-		value "43y"
+		rdf:type gdx:Age ;
+		gdx:ageAtTime "1910" ;
+		gdx:ageValue "43y"
 	] .
 
 :fact2 rdf:type gdx:TranscribedFact ;
 	gdx:transcribedBy users:janeblogs ;
-	gdx:transcriptionOf records:1940census00336 ;
+	gdx:transcriptionOf records:census_1940_00336 ;
 	rdf:subject :person2 ;
 	rdf:predicate gdx:age ;
 	rdf:object [
-		rdf:type Age ;
-		atTime "1920" ;
-		value "53y"
+		rdf:type gdx:Age ;
+		gdx:ageAtTime "1920" ;
+		gdx:ageValue "53y"
 	] .
 
 :fact3 rdf:type gdx:SynthesizedFact ;
 	gdx:synthesizedBy users:jorgegomez ;
 	gdx:factCreationDate "5 Jan 2012" ;
-	rdf:subject <http://example.com/transcription/1930census_00221#person1> ;
+	rdf:subject <http://example.com/transcription/census_1930_00221#person1> ;
 	rdf:predicate owl:sameAs ;
-	rdf:object <http://example.com/transcription/1940census_00336#person3> .
+	rdf:object <http://example.com/transcription/census_1940_00336#person3> .
 
 # Assert some equivalences
 :factA rdf:type gdx:SynthesizedFact ;

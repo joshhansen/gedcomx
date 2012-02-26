@@ -81,11 +81,11 @@
 # Ages
 :Age rdf:type rdfs:Class .
 
-:atTime rdf:type rdfs:Class ;
+:ageAtTime rdf:type rdfs:Class ;
 	rdfs:domain :Age ;
 	rdfs:range xsd:string .
 
-:value rdf:type rdfs:Class ;
+:ageValue rdf:type rdfs:Class ;
 	rdfs:domain :Age ;
 	rdfs:range xsd:string .
 

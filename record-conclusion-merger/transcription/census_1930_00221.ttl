@@ -2,24 +2,24 @@
 @prefix gdx: <http://example.com/genealogy#> .
 @prefix records: <http://example.com/records#> .
 @prefix users: <http://example.com/users#> .
-@prefix : <http://example.com/transcription/1930census_00221_a#> .
+@prefix : <http://example.com/transcription/census_1930_00221_a#> .
 
 # This file is a transcription of 1930 Census record 00221 by Joe Blogs
 <> 	rdf:type gdx:Transcription ;
 	gdx:transcribedBy users:joeblogs ;
-	gdx:transcriptionOf records:1930census00221 .
+	gdx:transcriptionOf records:census_1930_00221 .
 
 # The facts they transcribe about the record itself
 :factA	rdf:type gdx:TranscribedFact ;
-	rdf:subject records:1930census00221 ;
+	rdf:subject records:census_1930_00221 ;
 	rdf:predicate gdx:enumerationDate ;
 	rdf:object "12 Jul 1910" .
 :factB	rdf:type TranscribedFact ;
-	rdf:subject records:1930census00221 ;
+	rdf:subject records:census_1930_00221 ;
 	rdf:predicate gdx:pageNumber ;
 	rdf:object 221 .
 :factC	rdf:type TranscribedFact ;
-	rdf:subject records:1930census00221 ;
+	rdf:subject records:census_1930_00221 ;
 	rdf:predicate gdx:enumerator ;
 	rdf:object [
 		rdf:type :TranscribedPerson ;
@@ -57,8 +57,8 @@
 	rdf:predicate gdx:age ;
 	rdf:object [
 		rdf:type Age ;
-		atTime "1910" ;
-		value "43y"
+		gdx:ageAtTime "1910" ;
+		gdx:ageValue "43y"
 	] .
 
 :fact4 rdf:type TranscribedFact ;
@@ -66,6 +66,6 @@
 	rdf:predicate gdx:age ;
 	rdf:object [
 		rdf:type Age ;
-		atTime "1910" ;
-		value "41y"
+		gdx:ageAtTime "1910" ;
+		gdx:ageValue "41y"
 	] .
