@@ -127,18 +127,32 @@
 :SynthesizedFact rdf:type rdfs:Class ;
 	rdfs:subClassOf :Fact .
 
-:factCreationDate rdf:type rdf:Property ;
-	rdfs:domain :Fact ;
-	rdfs:range xsd:string .
+:created rdf:type rdf:Property ;
+    rdfs:domain :Fact ;
+    rdfs:range xsd:string .
+
+:modified rdf:type rdf:Property ;
+    rdfs:domain :Fact ;
+    rdfs:range xsd:string .
+
+:proofStatement rdf:type rdf:Property ;
+    rdfs:domain :Fact ;
+    rdfs:range xsd:string .
+
+:confidence rdf:type rdf:Property ;
+    rdfs:domain :Fact ;
+    rdfs:range :Confidence .
+
+:contributor rdf:type rdf:Property ;
+    rdfs:domain :Fact ;
+    rdfs:range :Person .
 
 # Any evidence involved in this conclusion
-:factEvidence rdf:type rdf:Property ;
+:evidence rdf:type rdf:Property ;
 	rdfs:domain :Fact ;
 	rdfs:range rdf:Resource .
 
 # Other facts involved in this conclusion
-:supportingFact rdf:type rdf:Property ;
-	rdfs:subPropertyOf :factEvidence ;
+:antecedent rdf:type rdf:Property ;
 	rdfs:domain :Fact ;
 	rdfs:range :Fact .
-
