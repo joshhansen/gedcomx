@@ -8,6 +8,11 @@
 <> 	rdf:type gdx:Transcription ;
 	gdx:transcribedBy users:joeblogs ;
 	gdx:transcriptionOf records:census_1930_00221 .
+	#This implies that all facts in this document have
+	#    gdx:contributor users:joeblogs
+	# and 
+	#    gdx:factTranscriptionOf records:census_1930_00221
+	# unless otherwise specified.
 
 # The facts they transcribe about the record itself
 :factA	rdf:type gdx:TranscribedFact ;
@@ -34,7 +39,7 @@
 :person2 rdf:type TranscribedPerson .
 
 # Facts they transcribe about the people in the record
-:fact1 rdf:type TranscribedFact ;
+:fact1 rdf:type Fact ;
 	rdf:subject :person1 ;
 	rdf:predicate gdx:name ;
 	rdf:object [
@@ -43,16 +48,54 @@
 		gdx:familyName "Jones"
 	] .
 
-:fact2 rdf:type TranscribedFact ;
+:claim2 rdf:type gdx:Claim ;
 	rdf:subject :person2 ;
 	rdf:predicate gdx:name ;
-	rdf:object [
-		rdf:type gdxName ;
-		gdx:givenName "Sally" ;
+	rdf:object :name2 .
+
+:claim2_1 rdf:type gdx:Claim ;
+    rdf:subject :name2 ;
+    rdf:predicate rdf:type ;
+    rdf:object gdx:Name .
+
+:claim2_2 rdf:type gdx:Claim ;
+    rdf:subject :name2 ;
+    rdf:predicate gdx:givenName ;
+    rdf:object "Salty" .
+
+:claim2_3 rdf:type gdx:Claim ;
+    rdf:subject :name2 ;
+    rdf:predicate gdx:familyName ;
+    rdf:object "Jones" .
+
+:assessment2_2 rdf:type gdx:Assessment ;
+    gdx:assesses :claim2_2 ;
+    
+
+:claim2_2b rdf:type gdx:Claim ;
+    rdf:subject :name2 ;
+    rdf:predicate gdx:givenName ;
+    
+
+
+[
+		rdf:type gdx:Name ;
+		gdx:givenName "Salty" ;
 		gdx:familyName "Jones"
 	] .
 
-:fact3 rdf:type TranscribedFact ;
+:fact2b rdf:type Fact ;
+    rdf:subject :person2 ;
+    rdf:predicate gdx:name ;
+    rdf:object [
+        rdf:type gdx:Name ;
+        gdx:givenName "Sally" ;
+        gdx:familyName "Jones"
+    ] ;
+    gdx:antecedent :fact2 ;
+    
+
+:fact3 rdf:type Fact ;
 	rdf:subject :person1 ;
 	rdf:predicate gdx:age ;
 	rdf:object [
@@ -61,7 +104,7 @@
 		gdx:ageValue "43y"
 	] .
 
-:fact4 rdf:type TranscribedFact ;
+:fact4 rdf:type Fact ;
 	rdf:subject :person2 ;
 	rdf:predicate gdx:age ;
 	rdf:object [
