@@ -156,3 +156,7 @@
 :antecedent rdf:type rdf:Property ;
 	rdfs:domain :Fact ;
 	rdfs:range :Fact .
+
+:factTranscriptionOf rdf:type rdf:Property ;
+	rdfs:domain :Fact ;
+	rdfs:range rdf:Resource .
