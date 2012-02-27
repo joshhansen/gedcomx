@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/">
+    <rdfs:label xml:lang="en-US">Conclusion Model</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The conclusion model defines the types and elements of genealogical conclusion data.</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/alternateForm">
+    <rdfs:label xml:lang="en-US">alternateForm</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Alternate forms of the name, such as the romanized form of a non-latin name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/NameForm"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Name"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Conclusion">
+    <rdfs:label xml:lang="en-US">Conclusion</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A genealogical conclusion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/date">
+    <rdfs:label xml:lang="en-US">date</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The date of applicability of this fact.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Date"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Fact"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Date">
+    <rdfs:label xml:lang="en-US">Date</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A concluded genealogical date.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/fact">
+    <rdfs:label xml:lang="en-US">fact</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The conclusions about the facts of a conclusion resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Fact"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/HasFacts"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Fact">
+    <rdfs:label xml:lang="en-US">Fact</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A conclusion about a fact applicable to a person or relationship.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Event"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/father">
+    <rdfs:label xml:lang="en-US">father</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The father of a person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/fatherRelationship">
+    <rdfs:label xml:lang="en-US">fatherRelationship</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The relationship of a person to the father.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Relationship"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/formal">
+    <rdfs:label xml:lang="en-US">formal</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The formal value.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/formalizeable"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/fullText">
+    <rdfs:label xml:lang="en-US">fullText</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The full text of the name form.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/NameForm"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/gender">
+    <rdfs:label xml:lang="en-US">gender</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The gender conclusions for the person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Gender"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Gender">
+    <rdfs:label xml:lang="en-US">Gender</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A gender conclusion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/HasFacts">
+    <rdfs:label xml:lang="en-US">HasFacts</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Conclusion data that has facts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/living">
+    <rdfs:label xml:lang="en-US">living</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Living status of the person as treated by the system. The value of this property is intended
+to be based on a system-specific calculation and therefore has limited portability. Conclusions
+about the living status of a person can be modeled with a fact.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/mother">
+    <rdfs:label xml:lang="en-US">mother</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The mother of a person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/motherRelationship">
+    <rdfs:label xml:lang="en-US">motherRelationship</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The relationship of a person to the mother.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Relationship"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/name">
+    <rdfs:label xml:lang="en-US">name</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The name conclusions for the person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Name"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Name">
+    <rdfs:label xml:lang="en-US">Name</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A name conclusion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/NameForm">
+    <rdfs:label xml:lang="en-US">NameForm</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A form of a name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/NamePart">
+    <rdfs:label xml:lang="en-US">NamePart</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A part of a name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/original">
+    <rdfs:label xml:lang="en-US">original</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The original text as supplied by the user.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/formalizeable"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/part">
+    <rdfs:label xml:lang="en-US">part</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The different parts of the name form.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/NamePart"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/NameForm"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Person">
+    <rdfs:label xml:lang="en-US">Person</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A GEDCOM X Person. Instances of the type person must also be describable as instances of
+ the broader type Dataset.</rdfs:comment>
+    <rdfs:comment xml:lang="en-US">A person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/PersistentIdentifiable"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/conclusion/v1/HasFacts"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/person1">
+    <rdfs:label xml:lang="en-US">person1</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A reference to a person in the relationship. The name "person1" is used only to distinguish it from
+the other person in this relationship and implies neither order nor role. When the relationship type
+implies direction, it goes from "person1" to "person2".</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Relationship"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/person2">
+    <rdfs:label xml:lang="en-US">person2</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A reference to a person in the relationship. The name "person2" is used only to distinguish it from
+the other person in this relationship and implies neither order nor role. When the relationship type
+implies direction, it goes from "person1" to "person2".</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Relationship"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/place">
+    <rdfs:label xml:lang="en-US">place</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The place of applicability of this fact.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Place"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Fact"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Place">
+    <rdfs:label xml:lang="en-US">Place</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A concluded genealogical place.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/preferred">
+    <rdfs:label xml:lang="en-US">preferred</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Whether the conclusion is preferred above other conclusions of the same type. Useful, for example, for display purposes.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/primaryForm">
+    <rdfs:label xml:lang="en-US">primaryForm</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The primary form of the name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/NameForm"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Name"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/Relationship">
+    <rdfs:label xml:lang="en-US">Relationship</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A relationship between two or more persons.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/conclusion/v1/HasFacts"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/source">
+    <rdfs:label xml:lang="en-US">source</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The source references for a conclusion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://gedcomx.org/source"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/Conclusion"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/spouse">
+    <rdfs:label xml:lang="en-US">spouse</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The spouse of a person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Person"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/spouseRelationship">
+    <rdfs:label xml:lang="en-US">spouseRelationship</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The relationship of a person to the spouse.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/conclusion/v1/Relationship"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/conclusion/v1/text">
+    <rdfs:label xml:lang="en-US">text</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The text of the name part.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/conclusion/v1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/conclusion/v1/NamePart"/>
+  </rdf:Description>
+</rdf:RDF>
