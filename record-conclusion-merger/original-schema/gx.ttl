@@ -1,0 +1,821 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://gedcomx.org/> rdfs:label "Common Model"@en-us ;
+	rdfs:comment "The common model defines the types and elements that are common to all model."@en-us .
+
+<http://gedcomx.org/Address> rdfs:label "Address"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Adopted> rdfs:label "Adopted"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Adoption> rdfs:label "Adoption"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Adoptive> rdfs:label "Adoptive"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/AdultChristening> rdfs:label "AdultChristening"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Age> rdfs:label "Age"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/AlsoKnownAs> rdfs:label "AlsoKnownAs"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/alternateId> rdfs:label "alternateId"@en-us ;
+	rdfs:comment "List of alternate identifiers for a resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+	rdfs:range <http://gedcomx.org/AlternateId> .
+
+<http://gedcomx.org/AlternateId> rdfs:label "AlternateId"@en-us ;
+	rdfs:comment """An alternate id for an entity, such as the id in another system or
+an id prior to a merge operation."""@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Annulment> rdfs:label "Annulment"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Apparently> rdfs:label "Apparently"@en-us ;
+	rdfs:comment """The author has formed an impression or presumption, typically based upon common experience, but has not
+ tested the matter."""@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/attribution> rdfs:label "attribution"@en-us ;
+	rdfs:comment """Attribution metadata for a genealogical resource. Attribution data is necessary to support
+        a sound <a href=\"https://wiki.familysearch.org/en/Genealogical_Proof_Standard\">genealogical proof statement</a>."""^^rdf:XMLLiteral ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:range <http://gedcomx.org/Attribution> ;
+	rdfs:domain <http://gedcomx.org/GenealogicalResource> .
+
+<http://gedcomx.org/Attribution> rdfs:label "Attribution"@en-us ;
+	rdfs:comment "Attribution for data."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Bank> rdfs:label "Bank"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Baptism> rdfs:label "Baptism"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/BarMitzvah> rdfs:label "BarMitzvah"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/BasMitzvah> rdfs:label "BasMitzvah"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/BatchNumber> rdfs:label "BatchNumber"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/bibliographicCitation> rdfs:label "bibliographicCitation"@en-us ;
+	rdfs:comment "The bibliographic citation for this entity."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/bibliographicCitation> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/GenealogicalEntity> .
+
+<http://gedcomx.org/Biological> rdfs:label "Biological"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Birth> rdfs:label "Birth"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/BirthName> rdfs:label "BirthName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Blessing> rdfs:label "Blessing"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Burial> rdfs:label "Burial"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/CasteName> rdfs:label "CasteName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Cemetery> rdfs:label "Cemetery"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Census> rdfs:label "Census"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Certainly> rdfs:label "Certainly"@en-us ;
+	rdfs:comment "The author has no reasonable doubt about the assertion, based upon sound research and good evidence."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Christening> rdfs:label "Christening"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Church> rdfs:label "Church"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Circumcision> rdfs:label "Circumcision"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Citizenship> rdfs:label "Citizenship"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/City> rdfs:label "City"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/ClanName> rdfs:label "ClanName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Collection> rdfs:label "Collection"@en-us ;
+	rdfs:comment "A formal collection of genealogical entities."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class ;
+	rdfs:subClassOf <http://gedcomx.org/GenealogicalEntity> , <http://purl.org/dc/dcmitype/Collection> .
+
+<http://gedcomx.org/CommonLawMarriage> rdfs:label "CommonLawMarriage"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/confidence> rdfs:label "confidence"@en-us ;
+	rdfs:comment "The level of confidence the contributor has about the data."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:domain <http://gedcomx.org/Attribution> .
+
+<http://gedcomx.org/Confirmation> rdfs:label "Confirmation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/contributor> rdfs:label "contributor"@en-us ;
+	rdfs:comment "Reference to the contributor of the attributed data."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> ;
+	rdfs:domain <http://gedcomx.org/Attribution> .
+
+<http://gedcomx.org/CountOfChildren> rdfs:label "CountOfChildren"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/CountOfMarriages> rdfs:label "CountOfMarriages"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Country> rdfs:label "Country"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/County> rdfs:label "County"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Couple> rdfs:label "Couple"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Cremation> rdfs:label "Cremation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/CurrentlySpouses> rdfs:label "CurrentlySpouses"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Days> rdfs:label "Days"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Death> rdfs:label "Death"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/DeathName> rdfs:label "DeathName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/description> rdfs:label "description"@en-us ;
+	rdfs:comment "A description of the collection."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/description> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/DiedBeforeEight> rdfs:label "DiedBeforeEight"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/District> rdfs:label "District"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Divorce> rdfs:label "Divorce"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/DivorceFiling> rdfs:label "DivorceFiling"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Draft> rdfs:label "Draft"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Dwelling> rdfs:label "Dwelling"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Emigration> rdfs:label "Emigration"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Engagement> rdfs:label "Engagement"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Ethnicity> rdfs:label "Ethnicity"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Excommunication> rdfs:label "Excommunication"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Female> rdfs:label "Female"@en-us ;
+	rdfs:comment "Female."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/FirstCommunion> rdfs:label "FirstCommunion"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Flourish> rdfs:label "Flourish"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Formal> rdfs:label "Formal"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Forwarded> rdfs:label "Forwarded"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Foster> rdfs:label "Foster"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Funeral> rdfs:label "Funeral"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/GedcomUUID> rdfs:label "GedcomUUID"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/GenealogicalEntity> rdfs:label "GenealogicalEntity"@en-us ;
+	rdfs:comment "A top-level genealogical resource, i.e. an entity."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class ;
+	rdfs:subClassOf <http://gedcomx.org/GenealogicalResource> , <http://gedcomx.org/PersistentIdentifiable> , <http://purl.org/dc/terms/BibliographicResource> .
+
+<http://gedcomx.org/GenealogicalResource> rdfs:label "GenealogicalResource"@en-us ;
+	rdfs:comment "A genealogical resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Given> rdfs:label "Given"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Graduation> rdfs:label "Graduation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Guardianship> rdfs:label "Guardianship"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Hospital> rdfs:label "Hospital"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Hours> rdfs:label "Hours"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Household> rdfs:label "Household"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/ID> rdfs:label "ID"@en-us ;
+	rdfs:comment "The id of this bundle."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/RDF> .
+
+<http://gedcomx.org/Illness> rdfs:label "Illness"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Immigration> rdfs:label "Immigration"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Interment> rdfs:label "Interment"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Island> rdfs:label "Island"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/item> rdfs:label "item"@en-us ;
+	rdfs:comment "The items in this collection."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/hasPart> ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/Land> rdfs:label "Land"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Legal> rdfs:label "Legal"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Likely> rdfs:label "Likely"@en-us ;
+	rdfs:comment "The author feels the odds weigh at least slightly in favor of the assertion."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Living> rdfs:label "Living"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MaidenName> rdfs:label "MaidenName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Male> rdfs:label "Male"@en-us ;
+	rdfs:comment "Male."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MaritalStatus> rdfs:label "MaritalStatus"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Marriage> rdfs:label "Marriage"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageBanns> rdfs:label "MarriageBanns"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageContract> rdfs:label "MarriageContract"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageIntent> rdfs:label "MarriageIntent"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageLicense> rdfs:label "MarriageLicense"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageNotice> rdfs:label "MarriageNotice"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriageSettlement> rdfs:label "MarriageSettlement"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MarriedName> rdfs:label "MarriedName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Migration> rdfs:label "Migration"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Military> rdfs:label "Military"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryAward> rdfs:label "MilitaryAward"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryBase> rdfs:label "MilitaryBase"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryCompany> rdfs:label "MilitaryCompany"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryDischarge> rdfs:label "MilitaryDischarge"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryRank> rdfs:label "MilitaryRank"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryRegiment> rdfs:label "MilitaryRegiment"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryService> rdfs:label "MilitaryService"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/MilitaryServiceBranch> rdfs:label "MilitaryServiceBranch"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Minutes> rdfs:label "Minutes"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Mission> rdfs:label "Mission"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/modified> rdfs:label "modified"@en-us ;
+	rdfs:comment "The modified timestamp for the attributed data."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/modified> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Attribution> .
+
+<http://gedcomx.org/Months> rdfs:label "Months"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Mortuary> rdfs:label "Mortuary"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Move> rdfs:label "Move"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Name> rdfs:label "Name"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Namesake> rdfs:label "Namesake"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/NationalId> rdfs:label "NationalId"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/NationalOrigin> rdfs:label "NationalOrigin"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Naturalization> rdfs:label "Naturalization"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/NeverHadChildren> rdfs:label "NeverHadChildren"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/NeverMarried> rdfs:label "NeverMarried"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Nickname> rdfs:label "Nickname"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/NotAccountable> rdfs:label "NotAccountable"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/note> rdfs:label "note"@en-us ;
+	rdfs:comment "Notes about a resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:range <http://gedcomx.org/GenealogicalResource> , <http://gedcomx.org/Note> ;
+	rdfs:domain <http://gedcomx.org/GenealogicalEntity> .
+
+<http://gedcomx.org/Note> rdfs:label "Note"@en-us ;
+	rdfs:comment "A note about a genealogical resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class ;
+	rdfs:subClassOf <http://gedcomx.org/GenealogicalResource> .
+
+<http://gedcomx.org/NumberOfChildren> rdfs:label "NumberOfChildren"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Occupation> rdfs:label "Occupation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Ordinance> rdfs:label "Ordinance"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Ordination> rdfs:label "Ordination"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/ParentChild> rdfs:label "ParentChild"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Parish> rdfs:label "Parish"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Pension> rdfs:label "Pension"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Perhaps> rdfs:label "Perhaps"@en-us ;
+	rdfs:comment "The author suggests that an idea is plausible, although it remains to be tested."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/persistentId> rdfs:label "persistentId"@en-us ;
+	rdfs:comment "The long-term persistent identifier for a resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+	rdfs:range rdfs:Literal .
+
+<http://gedcomx.org/PersistentIdentifiable> rdfs:label "PersistentIdentifiable"@en-us ;
+	rdfs:comment "A resource that is able to be identifiable in a long-term, persistent way."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/PhysicalDescription> rdfs:label "PhysicalDescription"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/PlotNumber> rdfs:label "PlotNumber"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Possessions> rdfs:label "Possessions"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Possibly> rdfs:label "Possibly"@en-us ;
+	rdfs:comment "The author feels some evidence supports the assertion, but the assertion is far from proved."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/PostalCode> rdfs:label "PostalCode"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/PostOffice> rdfs:label "PostOffice"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Prefix> rdfs:label "Prefix"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Prison> rdfs:label "Prison"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Probably> rdfs:label "Probably"@en-us ;
+	rdfs:comment "The author feels the assertion is more likely than not, based upon sound research and good evidence."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Probate> rdfs:label "Probate"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/proofStatement> rdfs:label "proofStatement"@en-us ;
+	rdfs:comment "The \"proof statement\" for the attributed data provided by the contributor."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/description> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Attribution> .
+
+<http://gedcomx.org/Province> rdfs:label "Province"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/publisher> rdfs:label "publisher"@en-us ;
+	rdfs:comment "The publisher for the collection."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/publisher> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/Race> rdfs:label "Race"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/RDF> rdfs:label "ResourceSet"@en-us ;
+	rdfs:comment """Generic holder/container/collection for a set of resources. The <a href=\"http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfxml\">RDF spec</a>
+    calls this an RDF \"description set\"."""^^rdf:XMLLiteral ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Religious> rdfs:label "Religious"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/ReligiousAffiliation> rdfs:label "ReligiousAffiliation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Residence> rdfs:label "Residence"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Retirement> rdfs:label "Retirement"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Roll> rdfs:label "Roll"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/ScholasticAchievement> rdfs:label "ScholasticAchievement"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Section> rdfs:label "Section"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Separation> rdfs:label "Separation"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Ship> rdfs:label "Ship"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/SocialSecurityNumber> rdfs:label "SocialSecurityNumber"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/source> rdfs:label "source"@en-us ;
+	rdfs:comment "The source references for a resource."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/source> .
+
+<http://gedcomx.org/spatial> rdfs:label "spatial"@en-us ;
+	rdfs:comment "The spatial coverage."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/spatial> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/State> rdfs:label "State"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Step> rdfs:label "Step"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Stillborn> rdfs:label "Stillborn"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Suffix> rdfs:label "Suffix"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Surname> rdfs:label "Surname"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Tax> rdfs:label "Tax"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/temporal> rdfs:label "temporal"@en-us ;
+	rdfs:comment "The temporal coverage."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/temporal> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/Territory> rdfs:label "Territory"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/text> rdfs:label "text"@en-us ;
+	rdfs:comment "The text of the note."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Note> .
+
+<http://gedcomx.org/title> rdfs:label "title"@en-us ;
+	rdfs:comment "The title for the collection."@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdf:Property ;
+	rdfs:subPropertyOf <http://purl.org/dc/terms/title> ;
+	rdfs:range rdfs:Literal ;
+	rdfs:domain <http://gedcomx.org/Collection> .
+
+<http://gedcomx.org/TitleOfNobility> rdfs:label "TitleOfNobility"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Town> rdfs:label "Town"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Township> rdfs:label "Township"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/TribeName> rdfs:label "TribeName"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Twin> rdfs:label "Twin"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/UniversalId> rdfs:label "UniversalId"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Unknown> rdfs:label "Unknown"@en-us ;
+	rdfs:comment """Unknown. Note that this should be used strictly as \"unknown\" and not to
+ indicate a type that is not set or not understood."""@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Vital> rdfs:label "Vital"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Ward> rdfs:label "Ward"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Will> rdfs:label "Will"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://gedcomx.org/Years> rdfs:label "Years"@en-us ;
+	rdfs:isDefinedBy <http://gedcomx.org/> ;
+	a rdfs:Class .
+
+<http://any23.org/tmp/> <http://vocab.sindice.net/date> "2012-02-27T20:09:22+00:00" ;
+	<http://vocab.sindice.net/size> "634"^^<http://www.w3.org/2001/XMLSchema#int> .
