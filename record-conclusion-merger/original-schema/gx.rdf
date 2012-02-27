@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://gedcomx.org/">
+    <rdfs:label xml:lang="en-US">Common Model</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The common model defines the types and elements that are common to all model.</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Address">
+    <rdfs:label xml:lang="en-US">Address</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Adopted">
+    <rdfs:label xml:lang="en-US">Adopted</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Adoption">
+    <rdfs:label xml:lang="en-US">Adoption</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Adoptive">
+    <rdfs:label xml:lang="en-US">Adoptive</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/AdultChristening">
+    <rdfs:label xml:lang="en-US">AdultChristening</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Age">
+    <rdfs:label xml:lang="en-US">Age</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/AlsoKnownAs">
+    <rdfs:label xml:lang="en-US">AlsoKnownAs</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/alternateId">
+    <rdfs:label xml:lang="en-US">alternateId</rdfs:label>
+    <rdfs:comment xml:lang="en-US">List of alternate identifiers for a resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/AlternateId"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/AlternateId">
+    <rdfs:label xml:lang="en-US">AlternateId</rdfs:label>
+    <rdfs:comment xml:lang="en-US">An alternate id for an entity, such as the id in another system or
+an id prior to a merge operation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Annulment">
+    <rdfs:label xml:lang="en-US">Annulment</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Apparently">
+    <rdfs:label xml:lang="en-US">Apparently</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author has formed an impression or presumption, typically based upon common experience, but has not
+ tested the matter.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/attribution">
+    <rdfs:label xml:lang="en-US">attribution</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Attribution metadata for a genealogical resource. Attribution data is necessary to support
+a sound <a href="https://wiki.familysearch.org/en/Genealogical_Proof_Standard">genealogical proof statement</a>.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/Attribution"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Attribution">
+    <rdfs:label xml:lang="en-US">Attribution</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Attribution for data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Bank">
+    <rdfs:label xml:lang="en-US">Bank</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Baptism">
+    <rdfs:label xml:lang="en-US">Baptism</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/BarMitzvah">
+    <rdfs:label xml:lang="en-US">BarMitzvah</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/BasMitzvah">
+    <rdfs:label xml:lang="en-US">BasMitzvah</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/BatchNumber">
+    <rdfs:label xml:lang="en-US">BatchNumber</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/bibliographicCitation">
+    <rdfs:label xml:lang="en-US">bibliographicCitation</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The bibliographic citation for this entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Biological">
+    <rdfs:label xml:lang="en-US">Biological</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Birth">
+    <rdfs:label xml:lang="en-US">Birth</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/BirthName">
+    <rdfs:label xml:lang="en-US">BirthName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Blessing">
+    <rdfs:label xml:lang="en-US">Blessing</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Burial">
+    <rdfs:label xml:lang="en-US">Burial</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/CasteName">
+    <rdfs:label xml:lang="en-US">CasteName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Cemetery">
+    <rdfs:label xml:lang="en-US">Cemetery</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Census">
+    <rdfs:label xml:lang="en-US">Census</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Certainly">
+    <rdfs:label xml:lang="en-US">Certainly</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author has no reasonable doubt about the assertion, based upon sound research and good evidence.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Christening">
+    <rdfs:label xml:lang="en-US">Christening</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Church">
+    <rdfs:label xml:lang="en-US">Church</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Circumcision">
+    <rdfs:label xml:lang="en-US">Circumcision</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Citizenship">
+    <rdfs:label xml:lang="en-US">Citizenship</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/City">
+    <rdfs:label xml:lang="en-US">City</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/ClanName">
+    <rdfs:label xml:lang="en-US">ClanName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Collection">
+    <rdfs:label xml:lang="en-US">Collection</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A formal collection of genealogical entities.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/CommonLawMarriage">
+    <rdfs:label xml:lang="en-US">CommonLawMarriage</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/confidence">
+    <rdfs:label xml:lang="en-US">confidence</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The level of confidence the contributor has about the data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Attribution"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Confirmation">
+    <rdfs:label xml:lang="en-US">Confirmation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/contributor">
+    <rdfs:label xml:lang="en-US">contributor</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Reference to the contributor of the attributed data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Attribution"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/CountOfChildren">
+    <rdfs:label xml:lang="en-US">CountOfChildren</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/CountOfMarriages">
+    <rdfs:label xml:lang="en-US">CountOfMarriages</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Country">
+    <rdfs:label xml:lang="en-US">Country</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/County">
+    <rdfs:label xml:lang="en-US">County</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Couple">
+    <rdfs:label xml:lang="en-US">Couple</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Cremation">
+    <rdfs:label xml:lang="en-US">Cremation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/CurrentlySpouses">
+    <rdfs:label xml:lang="en-US">CurrentlySpouses</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Days">
+    <rdfs:label xml:lang="en-US">Days</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Death">
+    <rdfs:label xml:lang="en-US">Death</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/DeathName">
+    <rdfs:label xml:lang="en-US">DeathName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/description">
+    <rdfs:label xml:lang="en-US">description</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A description of the collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/DiedBeforeEight">
+    <rdfs:label xml:lang="en-US">DiedBeforeEight</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/District">
+    <rdfs:label xml:lang="en-US">District</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Divorce">
+    <rdfs:label xml:lang="en-US">Divorce</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/DivorceFiling">
+    <rdfs:label xml:lang="en-US">DivorceFiling</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Draft">
+    <rdfs:label xml:lang="en-US">Draft</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Dwelling">
+    <rdfs:label xml:lang="en-US">Dwelling</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Emigration">
+    <rdfs:label xml:lang="en-US">Emigration</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Engagement">
+    <rdfs:label xml:lang="en-US">Engagement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Ethnicity">
+    <rdfs:label xml:lang="en-US">Ethnicity</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Excommunication">
+    <rdfs:label xml:lang="en-US">Excommunication</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Female">
+    <rdfs:label xml:lang="en-US">Female</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Female.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/FirstCommunion">
+    <rdfs:label xml:lang="en-US">FirstCommunion</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Flourish">
+    <rdfs:label xml:lang="en-US">Flourish</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Formal">
+    <rdfs:label xml:lang="en-US">Formal</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Forwarded">
+    <rdfs:label xml:lang="en-US">Forwarded</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Foster">
+    <rdfs:label xml:lang="en-US">Foster</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Funeral">
+    <rdfs:label xml:lang="en-US">Funeral</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/GedcomUUID">
+    <rdfs:label xml:lang="en-US">GedcomUUID</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/GenealogicalEntity">
+    <rdfs:label xml:lang="en-US">GenealogicalEntity</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A top-level genealogical resource, i.e. an entity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/PersistentIdentifiable"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/GenealogicalResource">
+    <rdfs:label xml:lang="en-US">GenealogicalResource</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A genealogical resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Given">
+    <rdfs:label xml:lang="en-US">Given</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Graduation">
+    <rdfs:label xml:lang="en-US">Graduation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Guardianship">
+    <rdfs:label xml:lang="en-US">Guardianship</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Hospital">
+    <rdfs:label xml:lang="en-US">Hospital</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Hours">
+    <rdfs:label xml:lang="en-US">Hours</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Household">
+    <rdfs:label xml:lang="en-US">Household</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/ID">
+    <rdfs:label xml:lang="en-US">ID</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The id of this bundle.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/RDF"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Illness">
+    <rdfs:label xml:lang="en-US">Illness</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Immigration">
+    <rdfs:label xml:lang="en-US">Immigration</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Interment">
+    <rdfs:label xml:lang="en-US">Interment</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Island">
+    <rdfs:label xml:lang="en-US">Island</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/item">
+    <rdfs:label xml:lang="en-US">item</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The items in this collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Land">
+    <rdfs:label xml:lang="en-US">Land</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Legal">
+    <rdfs:label xml:lang="en-US">Legal</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Likely">
+    <rdfs:label xml:lang="en-US">Likely</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author feels the odds weigh at least slightly in favor of the assertion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Living">
+    <rdfs:label xml:lang="en-US">Living</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MaidenName">
+    <rdfs:label xml:lang="en-US">MaidenName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Male">
+    <rdfs:label xml:lang="en-US">Male</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Male.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MaritalStatus">
+    <rdfs:label xml:lang="en-US">MaritalStatus</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Marriage">
+    <rdfs:label xml:lang="en-US">Marriage</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageBanns">
+    <rdfs:label xml:lang="en-US">MarriageBanns</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageContract">
+    <rdfs:label xml:lang="en-US">MarriageContract</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageIntent">
+    <rdfs:label xml:lang="en-US">MarriageIntent</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageLicense">
+    <rdfs:label xml:lang="en-US">MarriageLicense</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageNotice">
+    <rdfs:label xml:lang="en-US">MarriageNotice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriageSettlement">
+    <rdfs:label xml:lang="en-US">MarriageSettlement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MarriedName">
+    <rdfs:label xml:lang="en-US">MarriedName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Migration">
+    <rdfs:label xml:lang="en-US">Migration</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Military">
+    <rdfs:label xml:lang="en-US">Military</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryAward">
+    <rdfs:label xml:lang="en-US">MilitaryAward</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryBase">
+    <rdfs:label xml:lang="en-US">MilitaryBase</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryCompany">
+    <rdfs:label xml:lang="en-US">MilitaryCompany</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryDischarge">
+    <rdfs:label xml:lang="en-US">MilitaryDischarge</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryRank">
+    <rdfs:label xml:lang="en-US">MilitaryRank</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryRegiment">
+    <rdfs:label xml:lang="en-US">MilitaryRegiment</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryService">
+    <rdfs:label xml:lang="en-US">MilitaryService</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/MilitaryServiceBranch">
+    <rdfs:label xml:lang="en-US">MilitaryServiceBranch</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Minutes">
+    <rdfs:label xml:lang="en-US">Minutes</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Mission">
+    <rdfs:label xml:lang="en-US">Mission</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/modified">
+    <rdfs:label xml:lang="en-US">modified</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The modified timestamp for the attributed data.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/modified"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Attribution"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Months">
+    <rdfs:label xml:lang="en-US">Months</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Mortuary">
+    <rdfs:label xml:lang="en-US">Mortuary</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Move">
+    <rdfs:label xml:lang="en-US">Move</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Name">
+    <rdfs:label xml:lang="en-US">Name</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Namesake">
+    <rdfs:label xml:lang="en-US">Namesake</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NationalId">
+    <rdfs:label xml:lang="en-US">NationalId</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NationalOrigin">
+    <rdfs:label xml:lang="en-US">NationalOrigin</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Naturalization">
+    <rdfs:label xml:lang="en-US">Naturalization</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NeverHadChildren">
+    <rdfs:label xml:lang="en-US">NeverHadChildren</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NeverMarried">
+    <rdfs:label xml:lang="en-US">NeverMarried</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Nickname">
+    <rdfs:label xml:lang="en-US">Nickname</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NotAccountable">
+    <rdfs:label xml:lang="en-US">NotAccountable</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/note">
+    <rdfs:label xml:lang="en-US">note</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Notes about a resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+    <rdfs:range rdf:resource="http://gedcomx.org/Note"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/GenealogicalEntity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Note">
+    <rdfs:label xml:lang="en-US">Note</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A note about a genealogical resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://gedcomx.org/GenealogicalResource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/NumberOfChildren">
+    <rdfs:label xml:lang="en-US">NumberOfChildren</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Occupation">
+    <rdfs:label xml:lang="en-US">Occupation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Ordinance">
+    <rdfs:label xml:lang="en-US">Ordinance</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Ordination">
+    <rdfs:label xml:lang="en-US">Ordination</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/ParentChild">
+    <rdfs:label xml:lang="en-US">ParentChild</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Parish">
+    <rdfs:label xml:lang="en-US">Parish</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Pension">
+    <rdfs:label xml:lang="en-US">Pension</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Perhaps">
+    <rdfs:label xml:lang="en-US">Perhaps</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author suggests that an idea is plausible, although it remains to be tested.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/persistentId">
+    <rdfs:label xml:lang="en-US">persistentId</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The long-term persistent identifier for a resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/PersistentIdentifiable">
+    <rdfs:label xml:lang="en-US">PersistentIdentifiable</rdfs:label>
+    <rdfs:comment xml:lang="en-US">A resource that is able to be identifiable in a long-term, persistent way.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/PhysicalDescription">
+    <rdfs:label xml:lang="en-US">PhysicalDescription</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/PlotNumber">
+    <rdfs:label xml:lang="en-US">PlotNumber</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Possessions">
+    <rdfs:label xml:lang="en-US">Possessions</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Possibly">
+    <rdfs:label xml:lang="en-US">Possibly</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author feels some evidence supports the assertion, but the assertion is far from proved.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/PostalCode">
+    <rdfs:label xml:lang="en-US">PostalCode</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/PostOffice">
+    <rdfs:label xml:lang="en-US">PostOffice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Prefix">
+    <rdfs:label xml:lang="en-US">Prefix</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Prison">
+    <rdfs:label xml:lang="en-US">Prison</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Probably">
+    <rdfs:label xml:lang="en-US">Probably</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The author feels the assertion is more likely than not, based upon sound research and good evidence.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Probate">
+    <rdfs:label xml:lang="en-US">Probate</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/proofStatement">
+    <rdfs:label xml:lang="en-US">proofStatement</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The "proof statement" for the attributed data provided by the contributor.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Attribution"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Province">
+    <rdfs:label xml:lang="en-US">Province</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/publisher">
+    <rdfs:label xml:lang="en-US">publisher</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The publisher for the collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/publisher"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Race">
+    <rdfs:label xml:lang="en-US">Race</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/RDF">
+    <rdfs:label xml:lang="en-US">ResourceSet</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Generic holder/container/collection for a set of resources. The <a href="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfxml">RDF spec</a>
+calls this an RDF "description set".</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Religious">
+    <rdfs:label xml:lang="en-US">Religious</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/ReligiousAffiliation">
+    <rdfs:label xml:lang="en-US">ReligiousAffiliation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Residence">
+    <rdfs:label xml:lang="en-US">Residence</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Retirement">
+    <rdfs:label xml:lang="en-US">Retirement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Roll">
+    <rdfs:label xml:lang="en-US">Roll</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/ScholasticAchievement">
+    <rdfs:label xml:lang="en-US">ScholasticAchievement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Section">
+    <rdfs:label xml:lang="en-US">Section</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Separation">
+    <rdfs:label xml:lang="en-US">Separation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Ship">
+    <rdfs:label xml:lang="en-US">Ship</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/SocialSecurityNumber">
+    <rdfs:label xml:lang="en-US">SocialSecurityNumber</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/source">
+    <rdfs:label xml:lang="en-US">source</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The source references for a resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/spatial">
+    <rdfs:label xml:lang="en-US">spatial</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The spatial coverage.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/spatial"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/State">
+    <rdfs:label xml:lang="en-US">State</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Step">
+    <rdfs:label xml:lang="en-US">Step</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Stillborn">
+    <rdfs:label xml:lang="en-US">Stillborn</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Suffix">
+    <rdfs:label xml:lang="en-US">Suffix</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Surname">
+    <rdfs:label xml:lang="en-US">Surname</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Tax">
+    <rdfs:label xml:lang="en-US">Tax</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/temporal">
+    <rdfs:label xml:lang="en-US">temporal</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The temporal coverage.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Territory">
+    <rdfs:label xml:lang="en-US">Territory</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/text">
+    <rdfs:label xml:lang="en-US">text</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The text of the note.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Note"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/title">
+    <rdfs:label xml:lang="en-US">title</rdfs:label>
+    <rdfs:comment xml:lang="en-US">The title for the collection.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://gedcomx.org/Collection"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/TitleOfNobility">
+    <rdfs:label xml:lang="en-US">TitleOfNobility</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Town">
+    <rdfs:label xml:lang="en-US">Town</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Township">
+    <rdfs:label xml:lang="en-US">Township</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/TribeName">
+    <rdfs:label xml:lang="en-US">TribeName</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Twin">
+    <rdfs:label xml:lang="en-US">Twin</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/UniversalId">
+    <rdfs:label xml:lang="en-US">UniversalId</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Unknown">
+    <rdfs:label xml:lang="en-US">Unknown</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Unknown. Note that this should be used strictly as "unknown" and not to
+ indicate a type that is not set or not understood.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Vital">
+    <rdfs:label xml:lang="en-US">Vital</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Ward">
+    <rdfs:label xml:lang="en-US">Ward</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Will">
+    <rdfs:label xml:lang="en-US">Will</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://gedcomx.org/Years">
+    <rdfs:label xml:lang="en-US">Years</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>
