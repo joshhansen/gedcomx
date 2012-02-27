@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-
   <rdf:Description rdf:about="http://gedcomx.org/">
     <rdfs:label xml:lang="en-US">Common Model</rdfs:label>
     <rdfs:comment xml:lang="en-US">The common model defines the types and elements that are common to all model.</rdfs:comment>
@@ -81,8 +80,8 @@ an id prior to a merge operation.</rdfs:comment>
 
   <rdf:Description rdf:about="http://gedcomx.org/attribution">
     <rdfs:label xml:lang="en-US">attribution</rdfs:label>
-    <rdfs:comment xml:lang="en-US">Attribution metadata for a genealogical resource. Attribution data is necessary to support
-a sound <a href="https://wiki.familysearch.org/en/Genealogical_Proof_Standard">genealogical proof statement</a>.</rdfs:comment>
+    <rdfs:comment xml:lang="en-US" rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"><![CDATA[Attribution metadata for a genealogical resource. Attribution data is necessary to support
+        a sound <a href="https://wiki.familysearch.org/en/Genealogical_Proof_Standard">genealogical proof statement</a>.]]></rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://gedcomx.org/Attribution"/>
@@ -964,8 +963,8 @@ a sound <a href="https://wiki.familysearch.org/en/Genealogical_Proof_Standard">g
 
   <rdf:Description rdf:about="http://gedcomx.org/RDF">
     <rdfs:label xml:lang="en-US">ResourceSet</rdfs:label>
-    <rdfs:comment xml:lang="en-US">Generic holder/container/collection for a set of resources. The <a href="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfxml">RDF spec</a>
-calls this an RDF "description set".</rdfs:comment>
+    <rdfs:comment xml:lang="en-US" rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"><![CDATA[Generic holder/container/collection for a set of resources. The <a href="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfxml">RDF spec</a>
+    calls this an RDF "description set".]]></rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/"/>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>

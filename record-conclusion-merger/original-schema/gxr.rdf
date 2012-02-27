@@ -129,9 +129,9 @@
 
   <rdf:Description rdf:about="http://gedcomx.org/record/v1/interpreted">
     <rdfs:label xml:lang="en-US">interpreted</rdfs:label>
-    <rdfs:comment xml:lang="en-US">User interpretation of what the original value <i>means</i>, used optionally as needed to enhance the original
+    <rdfs:comment xml:lang="en-US" rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"><![CDATA[User interpretation of what the original value <i>means</i>, used optionally as needed to enhance the original
 value by correcting misspellings and other ambiguities. The interpretation is different from a conclusion because it should be made
-only within the context of the record and not be based on knowledge obtained from other sources.</rdfs:comment>
+    only within the context of the record and not be based on knowledge obtained from other sources.]]></rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://gedcomx.org/record/v1/"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
