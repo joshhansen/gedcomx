@@ -35,18 +35,18 @@
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:alternateId rdfs:label "alternateId"@en-us ;
-	rdfs:comment "List of alternate identifiers for a resource."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:identifier ;
-	rdfs:range :AlternateId .
-
 :AlternateId rdfs:label "AlternateId"@en-us ;
 	rdfs:comment """An alternate id for an entity, such as the id in another system or
 an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
+
+:alternateId rdfs:label "alternateId"@en-us ;
+    rdfs:comment "List of alternate identifiers for a resource."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:identifier ;
+    rdfs:range :AlternateId .
 
 :Annulment rdfs:label "Annulment"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -58,18 +58,41 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:attribution rdfs:label "attribution"@en-us ;
-	rdfs:comment """Attribution metadata for a genealogical resource. Attribution data is necessary to support
-        a sound <a href=\"https://wiki.familysearch.org/en/Genealogical_Proof_Standard\">genealogical proof statement</a>."""^^rdf:XMLLiteral ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:range :Attribution ;
-	rdfs:domain :GenealogicalResource .
+
 
 :Attribution rdfs:label "Attribution"@en-us ;
 	rdfs:comment "Attribution for data."@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
+
+:confidence rdfs:label "confidence"@en-us ;
+    rdfs:comment "The level of confidence the contributor has about the data."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:domain :Attribution .
+
+:contributor rdfs:label "contributor"@en-us ;
+    rdfs:comment "Reference to the contributor of the attributed data."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:contributor ;
+    rdfs:domain :Attribution .
+
+:modified rdfs:label "modified"@en-us ;
+    rdfs:comment "The modified timestamp for the attributed data."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:modified ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Attribution .
+
+:proofStatement rdfs:label "proofStatement"@en-us ;
+    rdfs:comment "The \"proof statement\" for the attributed data provided by the contributor."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:description ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Attribution .
 
 :Bank rdfs:label "Bank"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -91,13 +114,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:bibliographicCitation rdfs:label "bibliographicCitation"@en-us ;
-	rdfs:comment "The bibliographic citation for this entity."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:bibliographicCitation ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :GenealogicalEntity .
+
 
 :Biological rdfs:label "Biological"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -166,26 +183,64 @@ an id prior to a merge operation."""@en-us ;
 	a rdfs:Class ;
 	rdfs:subClassOf :GenealogicalEntity , dctype:Collection .
 
+:description rdfs:label "description"@en-us ;
+    rdfs:comment "A description of the collection."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:description ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Collection .
+
+:item rdfs:label "item"@en-us ;
+    rdfs:comment "The items in this collection."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:hasPart ;
+    rdfs:domain :Collection .
+
+:publisher rdfs:label "publisher"@en-us ;
+    rdfs:comment "The publisher for the collection."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:publisher ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Collection .
+
+:spatial rdfs:label "spatial"@en-us ;
+    rdfs:comment "The spatial coverage."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:spatial ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Collection .
+
+:temporal rdfs:label "temporal"@en-us ;
+    rdfs:comment "The temporal coverage."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:temporal ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Collection .
+
+:title rdfs:label "title"@en-us ;
+    rdfs:comment "The title for the collection."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:title ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Collection .
+
 :CommonLawMarriage rdfs:label "CommonLawMarriage"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:confidence rdfs:label "confidence"@en-us ;
-	rdfs:comment "The level of confidence the contributor has about the data."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:domain :Attribution .
+
 
 :Confirmation rdfs:label "Confirmation"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:contributor rdfs:label "contributor"@en-us ;
-	rdfs:comment "Reference to the contributor of the attributed data."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:contributor ;
-	rdfs:domain :Attribution .
+
 
 :CountOfChildren rdfs:label "CountOfChildren"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -227,13 +282,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:description rdfs:label "description"@en-us ;
-	rdfs:comment "A description of the collection."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:description ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Collection .
+
 
 :DiedBeforeEight rdfs:label "DiedBeforeEight"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -314,10 +363,33 @@ an id prior to a merge operation."""@en-us ;
 	a rdfs:Class ;
 	rdfs:subClassOf :GenealogicalResource , :PersistentIdentifiable , dct:BibliographicResource .
 
+:bibliographicCitation rdfs:label "bibliographicCitation"@en-us ;
+    rdfs:comment "The bibliographic citation for this entity."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:bibliographicCitation ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :GenealogicalEntity .
+
+:note rdfs:label "note"@en-us ;
+    rdfs:comment "Notes about a resource."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:range :GenealogicalResource , :Note ;
+    rdfs:domain :GenealogicalEntity .
+
 :GenealogicalResource rdfs:label "GenealogicalResource"@en-us ;
 	rdfs:comment "A genealogical resource."@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
+
+:attribution rdfs:label "attribution"@en-us ;
+    rdfs:comment """Attribution metadata for a genealogical resource. Attribution data is necessary to support
+        a sound <a href=\"https://wiki.familysearch.org/en/Genealogical_Proof_Standard\">genealogical proof statement</a>."""^^rdf:XMLLiteral ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:range :Attribution ;
+    rdfs:domain :GenealogicalResource .
 
 :Given rdfs:label "Given"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -343,6 +415,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
+#???
 :ID rdfs:label "ID"@en-us ;
 	rdfs:comment "The id of this bundle."@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -366,12 +439,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:item rdfs:label "item"@en-us ;
-	rdfs:comment "The items in this collection."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:hasPart ;
-	rdfs:domain :Collection .
+
 
 :Land rdfs:label "Land"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -483,13 +551,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:modified rdfs:label "modified"@en-us ;
-	rdfs:comment "The modified timestamp for the attributed data."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:modified ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Attribution .
+
 
 :Months rdfs:label "Months"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -539,18 +601,20 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:note rdfs:label "note"@en-us ;
-	rdfs:comment "Notes about a resource."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:range :GenealogicalResource , :Note ;
-	rdfs:domain :GenealogicalEntity .
+
 
 :Note rdfs:label "Note"@en-us ;
 	rdfs:comment "A note about a genealogical resource."@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class ;
 	rdfs:subClassOf :GenealogicalResource .
+
+:text rdfs:label "text"@en-us ;
+    rdfs:comment "The text of the note."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:range rdfs:Literal ;
+    rdfs:domain :Note .
 
 :NumberOfChildren rdfs:label "NumberOfChildren"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -585,12 +649,7 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:persistentId rdfs:label "persistentId"@en-us ;
-	rdfs:comment "The long-term persistent identifier for a resource."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:identifier ;
-	rdfs:range rdfs:Literal .
+
 
 :PersistentIdentifiable rdfs:label "PersistentIdentifiable"@en-us ;
 	rdfs:comment "A resource that is able to be identifiable in a long-term, persistent way."@en-us ;
@@ -639,25 +698,13 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:proofStatement rdfs:label "proofStatement"@en-us ;
-	rdfs:comment "The \"proof statement\" for the attributed data provided by the contributor."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:description ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Attribution .
+
 
 :Province rdfs:label "Province"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:publisher rdfs:label "publisher"@en-us ;
-	rdfs:comment "The publisher for the collection."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:publisher ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Collection .
+
 
 :Race rdfs:label "Race"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -709,19 +756,9 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:source rdfs:label "source"@en-us ;
-	rdfs:comment "The source references for a resource."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:source .
 
-:spatial rdfs:label "spatial"@en-us ;
-	rdfs:comment "The spatial coverage."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:spatial ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Collection .
+
+
 
 :State rdfs:label "State"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -747,32 +784,15 @@ an id prior to a merge operation."""@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:temporal rdfs:label "temporal"@en-us ;
-	rdfs:comment "The temporal coverage."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:temporal ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Collection .
+
 
 :Territory rdfs:label "Territory"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
 
-:text rdfs:label "text"@en-us ;
-	rdfs:comment "The text of the note."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Note .
 
-:title rdfs:label "title"@en-us ;
-	rdfs:comment "The title for the collection."@en-us ;
-	rdfs:isDefinedBy <http://gedcomx.org/> ;
-	a rdf:Property ;
-	rdfs:subPropertyOf dct:title ;
-	rdfs:range rdfs:Literal ;
-	rdfs:domain :Collection .
+
+
 
 :TitleOfNobility rdfs:label "TitleOfNobility"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
@@ -819,3 +839,17 @@ an id prior to a merge operation."""@en-us ;
 :Years rdfs:label "Years"@en-us ;
 	rdfs:isDefinedBy <http://gedcomx.org/> ;
 	a rdfs:Class .
+
+
+:persistentId rdfs:label "persistentId"@en-us ;
+    rdfs:comment "The long-term persistent identifier for a resource."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:identifier ;
+    rdfs:range rdfs:Literal .
+
+:source rdfs:label "source"@en-us ;
+    rdfs:comment "The source references for a resource."@en-us ;
+    rdfs:isDefinedBy <http://gedcomx.org/> ;
+    a rdf:Property ;
+    rdfs:subPropertyOf dct:source .
