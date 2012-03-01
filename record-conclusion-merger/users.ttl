@@ -3,27 +3,28 @@
 @prefix : <http://example.com/users#> .
 
 :jorgegomez rdf:type gdx:User ;
-	gdx:name [rdf:type gdx:Name ;
-		  rdf:simpleName "Jorge Gomez" ] ;
+	gdx:name [rdf:type gdx:Name ; gdx:simpleName "Jorge Gomez" ] ;
 	gdx:username "jorgegomez" ;
 	gdx:joined "30 Jul 2007" .
 
 :marysmith rdf:type gdx:User ;
-	gdx:name [rdf:type gdx:Name ;
-		  rdf:simpleName "Mary Smith" ] ;
+	gdx:name [rdf:type gdx:Name ; gdx:simpleName "Mary Smith" ] ;
 	gdx:username "marysmith" ;
 	gdx:joined "22 Dec 2007" .
 
 :janebloggs rdf:type gdx:Indexer ;
-	gdx:name [rdf:type gdx:Name ;
-		  rdf:simpleName "Jane Blogs" ] ;
+	gdx:name [rdf:type gdx:Name ; gdx:simpleName "Jane Blogs" ] ;
 	gdx:username "janeblogs" ;
 	gdx:joined "6 Jun 2008" ;
 	gdx:batchesIndexed 10 .
 
 :joebloggs rdf:type gdx:Indexer ;
-	gdx:name [rdf:type gdx:Name ;
-		  rdf:simpleName "Joe Blogs" ] ;
+	gdx:name [rdf:type gdx:Name ; gdx:simpleName "Joe Blogs" ] ;
 	gdx:username "joeblogs" ;
 	gdx:joined "4 Apr 2011" ;
 	gdx:batchesIndexed 55 .
+
+:joeschmo rdf:type gdx:User ;
+    gdx:name [rdf:type gdx:Name; gdx:simpleName "Joseph C. Schmo"] ;
+    gdx:username "joeschmo" ;
+    gdx:joined "8 Nov 2011" .

@@ -6,12 +6,19 @@
 @prefix : <http://example.com/synthesis/2012jan5_00044#> .
 
 <> rdf:type gdx:GenealogicalData ;
-	:claimsBy users:jorgegomez .
+	:claimsBy users:jorgegomez ;
+    :assessmentsBy users:jorgegomez .
 
 # Jorge Gomez says he thinks that person1 on 1930 Census record 00221 and person1 on 1940 Census record 00336 are the
-# same person
+# same person...
 :claim1 rdf:type gdx:Claim ;
 	gdx:created "5 Jan 2012" ;
 	rdf:subject src1:person1 ;
 	rdf:predicate owl:sameAs ;
 	rdf:object src2:person3 .
+
+:assessment1 rdf:type gdx:Assessment ;
+    gdx:assesses :claim1 ;
+    gdx:assessment gdx:stronglyAgreeWith ;
+    gdx:assessmentText "I'm pretty darn sure about this." ;
+    gdx:assessmentReason "Same wife and children with corresponding ages" .

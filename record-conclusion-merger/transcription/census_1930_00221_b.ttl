@@ -22,7 +22,7 @@
     rdf:predicate gdx:givenName ;
     rdf:object "Sally" .
 
-# ...and show strong approval for this new interpretation
+# ...and show strong confidence in this new interpretation
 :assessment2 rdf:type gdx:Assessment ;
     gdx:assesses :claim1 ;
     gdx:assessment gdx:stronglyAgreeWith .

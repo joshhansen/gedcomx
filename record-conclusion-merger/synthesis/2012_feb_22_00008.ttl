@@ -33,11 +33,11 @@
 # Deduce Bob Jones's birth date from the two age facts
 :claim3 rdf:type gdx:Claim ;
     gdx:created "22 Feb 2012" ;
-    gdx:antecedent :claim1, :claim2, :claim3 ;
-    rdf:subject :person3 ;
+    gdx:antecedent src1:claim3, src2:claim3 ;
+    rdf:subject :person1 ;
     rdf:predicate gdx:birthDate ;
     rdf:object "1867" ;
-    gdx:claimText ":person3 was born in 1867" .
+    gdx:claimText ":person1 was born in 1867" .
 
 :assessment1 rdf:type gdx:Assessment ;
     gdx:assesses :claim1, :claim2, :claim3 ;

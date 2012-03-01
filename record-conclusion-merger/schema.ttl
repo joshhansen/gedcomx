@@ -16,14 +16,16 @@
     rdfs:range :GenealogicalData .
 
 :claimsBy rdf:type rdf:Property ;
-	rdfs:domain :GenealogicalData ;
-	rdfs:range :Agent .
+    rdfs:domain :GenealogicalData ;
+    rdfs:range :Agent .
 
 :assessmentsBy rdf:type rdf:Property ;
-	rdfs:domain :GenealogicalData ;
-	rdfs:range :Agent .
+    rdfs:domain :GenealogicalData ;
+    rdfs:range :Agent .
 
-# People (and Agents!)
+# People (and Agents! So algorithms can represent their contributions, too.)
+# Note that Person represents both the people in the genealogical records and the people researching them, though the
+# latter should always be distinguished by being, more specifically, a User.
 :Agent rdf:type rdfs:Class ;
     owl:equivalentClass foaf:Agent .
 
@@ -32,35 +34,35 @@
     owl:subClassOf :Agent .
 
 :User rdf:type rdfs:Class ;
-	rdfs:subClassOf :Person .
+    rdfs:subClassOf :Person .
 
 :username rdf:type rdf:Property ;
-	rdfs:domain :User ;
-	rdfs:range xsd:string .
+    rdfs:domain :User ;
+    rdfs:range xsd:string .
 
 :joined rdf:type rdf:Property ;
-	rdfs:domain :User ;
-	rdfs:range xsd:string .
+    rdfs:domain :User ;
+    rdfs:range xsd:string .
 
 :Indexer rdf:type rdfs:Class ;
-	rdfs:subClassOf :User .
+    rdfs:subClassOf :User .
 
 :batchesIndexed rdf:type rdf:Property ;
-	rdfs:domain :Indexer ;
-	rdfs:range xsd:int .
+    rdfs:domain :Indexer ;
+    rdfs:range xsd:int .
 
 # People properties
 :name rdf:type rdf:Property ;
-	rdfs:domain :Person ;
-	rdfs:range :Name .
+    rdfs:domain :Person ;
+    rdfs:range :Name .
 
 :age rdf:type rdf:Property ;
-	rdfs:domain :Person ;
-	rdfs:range :Age .
+    rdfs:domain :Person ;
+    rdfs:range :Age .
 
 :birthDate rdf:type rdf:Property ;
-	rdfs:domain :Person ;
-	rdfs:range xsd:string .
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
 
 :birthPlace rdf:type rdf:Property ;
     rdfs:domain :Person ;
@@ -71,16 +73,16 @@
 
 # A single string representing the name of a person in as a full a form as possible
 :simpleName rdf:type rdf:Property ;
-	rdfs:domain :Name ;
-	rdfs:range xsd:string .
+    rdfs:domain :Name ;
+    rdfs:range xsd:string .
 
 :givenName rdf:type rdf:Property ;
-	rdfs:domain :Name ;
-	rdfs:range xsd:string .
+    rdfs:domain :Name ;
+    rdfs:range xsd:string .
 
 :familyName rdf:type rdf:Property ;
-	rdfs:domain :Name ;
-	rdfs:range xsd:string .
+    rdfs:domain :Name ;
+    rdfs:range xsd:string .
 
 # Places
 :Place rdf:type rdfs:Class ;
@@ -103,28 +105,28 @@
 :Record rdf:type rdfs:Class .
 
 :recordImageLocation rdf:type rdf:Property ;
-	rdfs:domain :Record ;
-	rdfs:range xsd:anyURI .
+    rdfs:domain :Record ;
+    rdfs:range xsd:anyURI .
 
 :recordDate rdf:type rdf:Property ;
-	rdfs:domain :Record ;
-	rdfs:range xsd:string .
+    rdfs:domain :Record ;
+    rdfs:range xsd:string .
 
 :pageNumber rdf:type rdf:Property ;
-	rdfs:domain :Record ;
-	rdfs:range xsd:int .
+    rdfs:domain :Record ;
+    rdfs:range xsd:int .
 
 :PopulationSchedule rdf:type rdfs:Class ;
-	rdfs:subClassOf :Record .
+    rdfs:subClassOf :Record .
 
 :enumerationDate rdf:type rdf:Property ;
-	rdfs:subPropertyOf :recordDate ;
-	rdfs:domain :PopulationSchedule ;
-	rdfs:range xsd:string .
+    rdfs:subPropertyOf :recordDate ;
+    rdfs:domain :PopulationSchedule ;
+    rdfs:range xsd:string .
 
 :enumerator rdf:type rdf:Property ;
-	rdfs:domain :PopulationSchedule ;
-	rdfs:range :Person .
+    rdfs:domain :PopulationSchedule ;
+    rdfs:range :Person .
 
 
 # A claim of fact
@@ -158,30 +160,32 @@
     rdfs:domain :Claim ;
     rdfs:range :Agent .
 
+# A time limitation on the claim of fact.
 :forTime rdf:type rdf:Property ;
     rdfs:domain :Claim ;
     rdfs:range xsd:string .
 
 # Any evidence useful in evaluating the truthfulness of this claim
 :evidence rdf:type rdf:Property ;
-	rdfs:domain :Claim ;
-	rdfs:range rdf:Resource .
+    rdfs:domain :Claim ;
+    rdfs:range rdf:Resource .
 
 ## Other claims upon which this claim depends. That is, if an antecedent claim is true it will generally strengthen the
 ## case that this claim is true; if an antecedent claim is false, it will generally weaken the case that this claim is
 ## true.
 #:antecedent rdf:type rdf:Property ;
-#	rdfs:domain :Claim ;
-#	rdfs:range :Claim .
+#    rdfs:domain :Claim ;
+#    rdfs:range :Claim .
 
 # A given claim should be considered the union of itself with any descendant sub-claims
 :subClaim rdf:type rdf:Property ;
     rdfs:domain :Claim ;
     rdfs:range :Claim .
 
+# Indicate that this claim represents some fact found in a record or other entity
 :claimTranscriptionOf rdf:type rdf:Property ;
-	rdfs:domain :Claim ;
-	rdfs:range rdf:Resource .
+    rdfs:domain :Claim ;
+    rdfs:range rdf:Resource .
 
 # Assessments of fact claims provide an opinion about a claim---its accuracy, its justifiability upon existing evidence,
 # or anything else
@@ -203,9 +207,14 @@
     rdfs:domain :Assessment ;
     rdfs:range xsd:string .
 
-:assessmentExplanation rdf:type rdf:Property ;
+:assessmentReason rdf:type rdf:Property ;
     rdfs:domain :Assessment ;
     rdfs:range xsd:string .
+
+# Any assessment that in some way led to this one
+:supportingAssessment rdf:type rdf:Property ;
+    rdfs:domain :Assessment ;
+    rdfs:range :Assessment .
 
 # The meat of the assessment semantics resides in AssessmentValue, its subclasses, and their individuals
 :AssessmentValue rdf:type rdfs:Class .
@@ -218,4 +227,3 @@
 :neitherAgreeNorDisagree rdf:type rdfs:SimpleAssessmentValue .
 :somewhatDisagreeWith rdf:type rdfs:SimpleAssessmentValue .
 :stronglyDisagreeWith rdf:type rdfs:SimpleAssessmentValue .
-
